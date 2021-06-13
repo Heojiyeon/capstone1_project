@@ -1,0 +1,37 @@
+doctype html 
+html 
+    include includes/head.pug
+    body 
+    .wrapper_question 
+        form(action="/reply", method="post") 
+            p#answer_disabled 어떤 불편을 겪고 계신가요?
+                br  
+                input(type="checkbox", name="disabled", value="visual")
+                label(for="visual") 시각 
+                input(type="checkbox", name="disabled", value="hearing")
+                label(for="visual") 청각 
+                input(type="checkbox", name="disabled", value="physical")
+                label(for="visual") 거동      
+            p#answer_tourplace 원하는 관광 테마를 선택해주세요
+                br
+                input(type="checkbox", name="tourplace", value="nature")
+                label(for="visual") 자연/휴양 
+                input(type="checkbox", name="tourplace", value="history")
+                label(for="visual") 역사 
+                input(type="checkbox", name="tourplace", value="industry")
+                label(for="visual") 산업/건축 
+                input(type="checkbox", name="tourplace", value="shopping")
+                label(for="visual") 쇼핑 
+            p#answer_tourplace 원하는 여행 지역을 선택해주세요
+                br
+                input(type="checkbox", name="wantArea", value="1")
+                label(for="visual") 서울
+                input(type="checkbox", name="wantArea", value="31")
+                label(for="visual") 경기
+            p#answer_tourplace 원하는 숙박 여부를 선택해주세요
+                br
+                input(type="checkbox", name="needHotel", value="1")
+                label(for="visual") 네
+                input(type="checkbox", name="needHotel", value="0")
+                label(for="visual") 아니오
+            button 결과 확인하기
