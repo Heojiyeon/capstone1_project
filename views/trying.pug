@@ -1,0 +1,11 @@
+doctype html
+html 
+    body
+        ul
+            each val in ten
+                li= JSON.stringify(val.rank) + "위"
+                li= JSON.stringify(val.name)
+                li= "총 점수는 10점 만점에 " + JSON.stringify(val.rscore)
+            else 
+                li 값이 안보여요!
+        //- p !{ten}

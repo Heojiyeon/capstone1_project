@@ -1,9 +1,20 @@
-// 상위 10개의 이름 출력
+// 수정 금지 !!!!!!!!!!!!!!!! 제발 바꾸지마요 !!!!!! //
+// 상위 10개의 출력
 async function print_topten(connection, place_type, rank_score) {
+    var ten = [];
+    var rank = 1;
     for (let i of rank_score) {
+        item = {};
         print_name = await connection.execute(`SELECT name FROM ${place_type} WHERE ${place_type}_id = '${i.id}'`);
-        console.log(i.id, ": ", print_name.rows[0].NAME);
+        // console.log(i.id, ": ", print_name.rows[0].NAME);
+        item.rank = rank;
+        item.id = i.id;
+        item.name = print_name.rows[0].NAME;
+        item.rscore = Number((i.recommend_score).toFixed(3));
+        ten.push(item);
+        rank ++;
     }
+    return ten
 }
 
 // 관광지 편의시설, 상세정보 불러오기 (SQL - JOIN)
@@ -33,5 +44,6 @@ async function load_info2(connection, id, place_type) {
 
     return load_info.rows[0]
 }
+
 
 module.exports = { print_topten, load_info, load_info2 };
