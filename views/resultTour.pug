@@ -7,8 +7,12 @@ html
             form#form_result_res(action="/page", method="get")  
                 ul.rank_total 
                     li.rank_1_tour 1위
-                        p !{result}
-                        button 주변 음식점 살펴보기
+                        p= JSON.stringify(ten[0].name)
+                    li.rank_1_tour 상세정보
+                        p= JSON.stringify(ten[0].detail)
+                    li.rank_1_tour
+                        label(for="user-choice") 선택하기
+                        input(id="user-choice", type="checkbox")
                         
                           
             form#form_result_res(action="/resultRes", method="get")  

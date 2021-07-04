@@ -1,8 +1,6 @@
 무장애 관광코스 추천 시스템 "무야호"
 : " 관광지 - 음식점 - 숙박시설 " 을 한눈에 확인할 수 있는 사용자 맞춤형 추천 서비스를 제공합니다.
 
-
-
 <관광지 추천도 계산 알고리즘>
 !완료 ! 1. input이 제출될 때마다 value 저장
         (inputid, disabledtype, tourplacetype, wantarea, needhotel)

@@ -1,4 +1,3 @@
-// 수정 금지 !!!!!!!!!!!!!!!! 제발 바꾸지마요 !!!!!! //
 // 상위 10개의 출력
 async function print_topten(connection, place_type, rank_score) {
     var ten = [];
@@ -27,9 +26,9 @@ async function load_info(connection, tid) {
     ON TP.TOURPLACE_ID = DTP.TOURPLACE_ID) SRC
     WHERE SRC.TOURPLACE_ID = '${tid}'`;
 
-    var load_info = await connection.execute( load_info_query );
+    var loaded_info = await connection.execute( load_info_query );
 
-    return load_info.rows[0]
+    return loaded_info.rows[0]
 }
 
 // 음식점, 호텔 편의시설 정보 불러오기 (SQL - JOIN)
@@ -39,11 +38,8 @@ async function load_info2(connection, id, place_type) {
     JOIN convenience_${place_type}
     ON ${place_type}.${place_type}_id = convenience_${place_type}.${place_type}_id
     WHERE ${place_type}.${place_type}_id = '${id}'`;
-
-    var load_info = await connection.execute( load_info_query );
-
-    return load_info.rows[0]
+    var loaded_info = await connection.execute( load_info_query );
+    return loaded_info.rows[0]
 }
-
 
 module.exports = { print_topten, load_info, load_info2 };
