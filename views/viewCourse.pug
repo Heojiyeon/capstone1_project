@@ -1,0 +1,28 @@
+doctype html 
+html 
+    include includes/head.pug
+    body 
+        .wrapper_total_last
+            h5 최종 추천 코스
+            //- form#form_result_res(action="/resultRes", method="get")  
+            //-     ul.rank_total 
+            //-         li.rank_1_tour 관광지
+            //- form#form_result_res(action="/resultHotel", method="get")   
+            //-     ul.rank_total 
+            //-         li.rank_1_res 음식점
+            //- form#form_result_res(action="/resultRes", method="get")   
+            //-     ul.rank_hotel 
+            //-         li.rank_1_tour 호텔
+            form#form_result_res(action="/resultRes", method="get")
+                ul
+                    li.rank_1_tour 관광지: 경복궁
+                    li.rank_1_tour 서울특별시 종로구 세종로 사직로 161
+                    button#con 편의시설 확인하기
+                ul 
+                    li.rank_1_res 음식점: 가시리
+                    li.rank_1_res 서울특별시 종로구 종로31가길 25-5
+                    button#con 편의시설 확인하기
+                    //- li.rank_1_hotel 
+            img(src="./images/p1.jpg" width="310")
+            img(src="./images/p2.jpg" width="320")
+            img(src="./images/p3.jpg" width="295")

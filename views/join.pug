@@ -1,0 +1,17 @@
+doctype html 
+html 
+    include includes/head.pug
+    body 
+        .wrapper_join 
+            form#form_join(action="/regist", method="post") 
+                input(type="text", name="name", placeholder="이름을 입력하세요", requied=true)
+                br
+                input(type="email", name="email", placeholder="이메일을 입력하세요", requied=true)
+                br
+                input(type="text", name="id", placeholder="아이디를 입력하세요", requied=true)
+                br
+                input(type="password", name="pw", placeholder="비밀번호를 입력하세요", requied=true)
+                br
+                input(type="password", name="pw2", placeholder="비밀번호를 한 번 더 입력하세요", requied=true)
+                br
+                button 회원가입

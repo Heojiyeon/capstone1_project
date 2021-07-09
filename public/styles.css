@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  /* background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url("./images/travel21.jpg");  */
+  background-image: url("./images/travel24.jpg");
+  background-repeat : no-repeat;
+  background-size : cover;
+}
+
+header {
+  margin: 0;
+  display: flex;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  position: sticky;
+  justify-content: space-between;
+}
+
+i.fab.fa-accessible-icon{
+  font-family: 'BinggraeSamanco-Bold';
+}
+
+.main > h1 {
+  position: relative;
+  top: 55px;
+  left: 576px;
+  color: #774a2a;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'MapoAgape';
+  font-size: 65px;
+  text-shadow: -4px 0 rgb(255, 225, 142), 0 4px rgb(255, 225, 142), 4px 0 rgb(255, 225, 142), 0 -4px rgb(255, 225, 142);
+}
+
+h1 {
+  position: relative;
+  top: 55px;
+  left: 576px;
+  color: #774a2a;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'MapoAgape';
+  font-size: 65px;
+  text-shadow: -4px 0 rgb(255, 225, 142), 0 4px rgb(255, 225, 142), 4px 0 rgb(255, 225, 142), 0 -4px rgb(255, 225, 142);
+}
+.main > h2{
+  position: relative;
+  bottom: 65px;
+  left: 557px;
+  color: #ffffff;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'ON-여씨향약언해R';
+  font-size: 35px;
+  text-shadow: -1px 0 #422918, 0 1px #422918, 1px 0 #422918, 0 -1px #422918;
+}
+
+h4{
+  color: #422918;
+  position: relative;
+  top: 80px;
+  left: 680px;
+  font-size: 60px;
+  font-family: 'ON-여씨향약언해R';
+  /* text-shadow: -2px 0 #422918, 0 2px #422918, 2px 0 #422918, 0 -2px #422918; */
+}
+h5{
+  color: #422918;
+  position: relative;
+  top: 80px;
+  left: 610px;
+  font-size: 60px;
+  font-family: 'ON-여씨향약언해R';
+  /* text-shadow: -2px 0 #422918, 0 2px #422918, 2px 0 #422918, 0 -2px #422918; */
+}
+
+
+@font-face {
+  font-family: 'MapoAgape';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoAgapeA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ON-여씨향약언해R';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eleven@1.0/ON-여씨향약언해R.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GyeonggiBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BinggraeSamanco-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.enjoy {
+  padding: var(--micro-size);
+}
+
+.enjoy{
+  position: relative;
+  top: 100px;
+  left: 6px;
+}
+.wrapper_login{
+  position: relative;
+  top:260px;
+  left:115px;
+  /* right: 120px; */
+}
+button#start{
+  position: relative;
+  top:130px;
+  left: 600px;
+}
+.rectangle {
+  position: relative;
+  bottom: 320px;
+  left:540px;
+  width: 500px;
+  height: 400px;
+  background: rgb(255, 255, 255);
+  filter: opacity(.5) drop-shadow(0 0 0 rgba(197, 155, 100, 0.486));
+}
+
+.wrapper_question{
+  position: relative;
+  top: 80px;
+  left: 600px;
+  font-family: 'GyeonggiBatang';
+  /* background-color: #ffffff; */
+  font-size: 1.5em;
+  line-height: 45px;
+  border-radius: 20px;
+}
+
+button{
+  position: relative;
+  top: 100%;
+  left: 37%;
+  background:#3c56c750;
+  color:#fff;
+  border: solid;
+  border-top-width : 2px;
+  border-color: #3c56c76b;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  /* outline-width: thick;
+  outline-color: #422918; */
+  outline:none;
+  font-family: 'GyeonggiBatang';
+}
+button:hover{
+  background:rgba(255, 255, 255, 0.801);
+  color:#3c56c7b9;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #3c56c79c;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+button#result{
+  position: relative;
+  right: 500px;
+}​
+
+.wrapper_login {
+  position: relative;
+  top: 150px;
+  left: 100px;
+}
+.wrapper_question{
+  position: relative;
+  top:220px;
+  left:90px;
+  border-radius: 20px;
+  /* right: 120px; */
+}
+input[type="text"]{
+  position: relative;
+  bottom: 70px;
+  left:522px;
+  width: 250px;
+  height: 60px;
+  /* border: none; */
+  /* background: transparent; */
+  opacity: 0.7;
+  font-family: 'GyeonggiBatang';
+  font-size:1.3em;
+}
+input[type="password"]{
+  position: relative;
+  bottom:65px;
+  left:522px;
+  width: 250px;
+  height: 60px;
+  /* border:[ none; */
+  /* background: transparent; */
+  opacity: 0.7;
+  font-family: 'GyeonggiBatang';
+  font-size:1.3em;
+}
+
+
+p#p1,p#p2,p#p3{
+  font-family: 'GyeonggiBatang';
+  position: relative;
+  top:50px;
+  left:550px;
+  font-size: 1.53em;
+
+}
+p#answer_disabled,p#answer_tourplace,p#answer_tourplace,p#answer_tourplace{
+  position: relative;
+  bottom:72px;
+  left:510px;
+  background-color: #ffffff;
+  width: 370px;
+  opacity: 0.75;
+  text-align: center;
+  font-weight: 600;
+}
+button#result{
+  font-size: 1em;
+}
+
+button#login2{
+  opacity: 1;
+}
+
+.wrapper_login > img{
+  position: relative;
+  bottom : 152px;
+  left: 570px;
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 rgb(228, 191, 89));
+  filter: opacity(.5) drop-shadow(0 0 0 rgb(228, 191, 89));
+}
+.wrapper_total_last > button{
+  position: relative;
+  right: 300px;
+}
+
+.wrapper_total_last > form#form_result_res{
+  font-family: 'GyeonggiBatang';
+  position: relative;
+  top: 500px;
+  left: 570px;
+}
+
+ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+li.rank_1_tour{
+  /* margin:0px;
+  margin-right: 20px;
+  padding: 0px; */
+  background-color: #ffffff;
+  width:330px;
+  position: relative;
+  right: 295px;
+  bottom:40px;
+  font-size: 1.3em;
+  opacity: 0.85;
+  text-align: center;
+  font-weight: 600;
+  line-height: 25px;
+}
+li.rank_1_res{
+  /* margin:0px;
+  margin-right: 20px;
+  padding: 0px; */
+  background-color: #ffffff;
+  width:330px;
+  position: relative;
+  left:50px;
+  bottom: 147px;
+  font-size: 1.3em;
+  opacity: 0.85;
+  text-align: center;
+  font-weight: 600;
+  line-height: 25px;
+}
+li.rank_1_hotel{
+  /* margin:0px;
+  margin-right: 20px;
+  padding: 0px; */
+  background-color: #ffffff;
+  width:330px;
+  position: relative;
+  right: 290px;
+  bottom: 45px;
+  font-size: 1.3em;
+  opacity: 0.85;
+
+  /* text-align: center; */
+}
+img{
+  position: relative;
+  top:0px;
+  left:280px;
+  float: left;
+  margin-right: 35px;
+}
