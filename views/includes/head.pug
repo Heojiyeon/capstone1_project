@@ -1,9 +1,44 @@
 head
     title MUYAHO || RECOMMEND
+     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css')
+    link(rel="stylesheet" href="./bootstrapt/css/bootstrap.min.css")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous")
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+    script(src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js', type='text/javascript', charset='utf8')
+    script(src="./jquery-3.4.1.min.js")
+    script(src="./bootstrapt/js/bootstrap.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous")
+    //- script(src='https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js', type='text/javascript')
+body
+    block top-nav
+      include ./topnav
+    block hero-unit
+      .jumbortron
+        if flashMessages
+          each texts, type in flashMessages
+            .container
+              .alert.alert-dismissible.fade.show(class=`alert-${type}`)
+                each msg in texts
+                  | #{msg}
+                button.close(type='button', data-dismiss='alert', aria-label='close')
+                  span(aria-hidden='true') &times;
+    block content
+
+    block footer
+      
+
     header 
         h2 
-            i.fab.fa-accessible-icon MUYAHO!
+            i.fab.fa-accessible-icon 
         h2
             i.fas.fa-bars
     link(rel="stylesheet", href="styles.css")
-    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous") 
+    //-link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous") 

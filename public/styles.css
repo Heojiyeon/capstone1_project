@@ -5,9 +5,6 @@
 }
 
 :root {
-  --font-color: #efebe9;
-  --button-color: ##a98274;
-  --background-color: #4b2c20;
 
   --super-size: 70px;
   --big-size: 40px;
@@ -64,5 +61,216 @@ header > h2 {
   left: 40%;
 }
 
-#form_login {
+/* loading */
+.wrapper_loading{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 7px dotted #e74c3c;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation1 2s linear infinite;
+}
+
+.loading::after,
+.loading::before{
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.loading::after{
+  border-top: 7px dotted #e67e22;
+  transform: rotate(120deg);
+}
+
+.loading::before{
+  border-top: 7px dotted #2980b9;
+  transform: rotate(-120deg);
+}
+
+.loading span {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  animation: rotation2 2s linear infinite;
+}
+
+@keyframes rotation1{
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation2 {
+  to{
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+.wrapper_total{
+  color: #fff;
+  font-size: 20px;
+
+
+
+}
+
+p{
+  color: #fff;
+}
+
+/* loading */
+
+body {
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  float: center;
+}
+
+/* main_body */
+
+.jumbotron.p-3.text-white.rounded.bg-dark.main-image > img {
+  max-height: 500px!important;
+  width: 100%;
+}
+
+div.header.clearfix{
+  padding-top: 4em;
+}
+
+div > .featurette-image{
+  width: 100%;
+}
+
+/* footer */
+.footer{
+  text-align: center;
+}
+
+/* others */
+hr.featurette-divider{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* signin */
+h3.form-signin-heading{
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.form-signin {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.form-signin > input, button{
+  margin-bottom: 2em;
+}
+
+div.notice_signup{
+  text-align: right;
+}
+
+.jumbotron {
+  background: white;
+}
+
+/* signup */
+.py-5.text-center{
+  padding-bottom: 0em !important;
+}
+div.container.form-signup {
+  float: center;
+}
+
+button.btn.btn-primary.find-department{
+  width: 100%;
+}
+
+/* searches */
+
+.search-project-date{
+  text-align: right;
+}
+
+input#userdate{
+  text-align: right;
+}
+
+.row.sidebar{
+  height: 130em;
+}
+
+.table-employee-attr{
+  width: 40%;
+}
+
+/* user edit */
+select#departmentSelect.custom-select{
+  width: 38.5em;
+}
+
+
+/* card */
+.card {
+  color: black;
+}
+
+.card-text{
+  color: black;
+}
+
+.title {
+ 
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+     
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+    color: black;
+}
+
+.btn {
+  margin-top: auto;
 }

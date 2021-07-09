@@ -2,21 +2,31 @@ doctype html
 html 
     include includes/head.pug
     body
-        p 여기는 추천 숙박시설 1- 10위 순위로 나올 부분이다!  
-        .wrapper_total 
-            form#form_result_res(action="/resultRes", method="get")   
-                ul.rank_hotel 
-                    li.rank_1_tour 1위
-                    li.rank_2_tour 2위
-                    li.rank_3_tour 3위
-                    li.rank_4_tour 4위
-                    li.rank_5_tour 5위
-                    li.rank_6_tour 6위
-                    li.rank_7_tour 7위
-                    li.rank_8_tour 8위
-                    li.rank_9_tour 9위
-                    li.rank_10_tour 10위
-        form(action="/viewCourse", method="get") 
-            button 관광코스 한눈에 보기
-        form(action="/replay", method="get")
-            button 새로운 추천 받기
+    #accordionFlushExample.accordion.accordion-flush
+        .accordion-item
+            h2#flush-headingOne.accordion-header
+                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne')
+                    | Accordion Item #1
+            #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
+                .accordion-body
+                    | Placeholder content for this accordion, which is intended to demonstrate the 
+                    code .accordion-flush
+                    |  class. This is the first item&apos;s accordion body.
+        .accordion-item
+            h2#flush-headingTwo.accordion-header
+                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo')
+                    | Accordion Item #2
+            #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo' data-bs-parent='#accordionFlushExample')
+                .accordion-body
+                    | Placeholder content for this accordion, which is intended to demonstrate the 
+                    code .accordion-flush
+                    |  class. This is the second item&apos;s accordion body. Let&apos;s imagine this being filled with some actual content.
+        .accordion-item
+            h2#flush-headingThree.accordion-header
+                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls='flush-collapseThree')
+                    | Accordion Item #3
+            #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree' data-bs-parent='#accordionFlushExample')
+                .accordion-body
+                    | Placeholder content for this accordion, which is intended to demonstrate the 
+                    code .accordion-flush
+                    |  class. This is the third item&apos;s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.

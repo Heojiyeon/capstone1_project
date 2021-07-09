@@ -4,8 +4,14 @@ html
     body 
         .wrapper_login 
             form#form_login(action="/loggedIn", method="post") 
-                input(type="text", name="id", placeholder="아이디를 입력하세요", requied=true)
+                
+                
+                label
+                input#name.form-control(type="text", name="id", placeholder="아이디를 입력하세요", requied=true)
                 br
-                input(type="password", name="pw", placeholder="비밀번호를 입력하세요", requied=true)
+                .mb-3
+                label
+                input#name.form-control(type="password", name="pw", placeholder="비밀번호를 입력하세요", requied=true)
                 br
-                button 로그인 
+                .mb-3
+                button.btn.btn-light.btn-block(type="submit") 로그인 

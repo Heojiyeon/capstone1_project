@@ -107,6 +107,12 @@ app.get('/join', (req, res) => {
     res.render('join');
 });
 
+app.get("/loading", (req, res) => {
+    res.render('loading');
+});
+
+
+
 //클라이언트로부터 regist를 요청받으면
 app.post("/regist",function(request, response){
     console.log(request.body);
@@ -134,6 +140,10 @@ app.post("/regist",function(request, response){
 app.get("/question", (req, res) => {
     res.render('question');
 });
+
+
+
+
 
 // 클라이언트로부터 reply를 요청받으면
 app.post("/reply", function(request, response){

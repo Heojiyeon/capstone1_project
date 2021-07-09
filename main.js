@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const server = http.createServer(app);
 
-const run = require('./js/main2');
+//const run = require('./js/main');
 
 app.set("view engine", "pug");
 app.set('views', './views');
@@ -84,6 +84,10 @@ app.post("/regist",function(request, response){
 // question 화면
 app.get("/question", (req, res) => {
     res.render('question');
+});
+
+app.get("/loading", (req, res) => {
+    res.render('loading');
 });
 
 // 클라이언트로부터 reply를 요청받으면

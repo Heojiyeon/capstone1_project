@@ -5,7 +5,8 @@ html
     .wrapper_question 
         form(action="/reply", method="post") 
             p#answer_disabled 어떤 불편을 겪고 계신가요?
-                br  
+                br
+            
                 input(type="checkbox", name="disabled", value="visual")
                 label(for="visual") 시각 
                 input(type="checkbox", name="disabled", value="hearing")
@@ -34,4 +35,4 @@ html
                 label(for="visual") 네
                 input(type="checkbox", name="needHotel", value="0")
                 label(for="visual") 아니오
-            button 결과 확인하기
+            button.btn.btn-light.btn-block 결과 확인하기
