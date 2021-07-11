@@ -3,203 +3,34 @@ html
     include includes/head.pug
     body 
     .list-group
-        a.list-group-item.list-group-item-action(href='#' aria-current='')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 1위 
-                h3.mb-1 시흥 갯골생태공원
-                small.text-muted 3 days ago
-            p.mb-1 총 점수는 10점 만점에 7.096
-            small.text-muted 총 점수는 10점 만점에 7.096
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseOne") 자세히 보기
-            #collapseOne.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 경기도 유일의 내만갯벌과 옛염전의 쟁취를 느낄 수 있는 아름다운 공원입니다  
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 2위
-                h3.mb-1 걸포 중앙공원
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 7.015
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo")  자세히 보기
-            #collapseTwo.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 2006년 김포의 역사와 미래가 담긴 문화 공원을 주제로 걸포동에 조성된 걸포중앙공원은 150,000m가 넘는..
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 3위
-                h3.mb-1 아침고요수목원
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 5.64
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseThree")  자세히 보기
-            #collapseThree.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 아침고요수목원은 축령산의 빼어난 자연경관을 배경으로 하여 한국의 미를 듬뿍 담은 정원들을 원예학적으로..
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-        
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 4위
-                h3.mb-1 서울대공원
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 5.6
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseFour")  자세히 보기
-            #collapseFour.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 서울동물원은 동물과 자연보전의 의미 , 동물에게 더 행복해지는 동물원을 만들고자 노력하고 있으며 동물원의 기능인 전시, 보전, 교육 , 연구에 힘쓰고 있습니다
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
+        -var i = 0
+        -for(var i =1; i<11; i++)
+            a.list-group-item.list-group-item-action( aria-current='')
+                .d-flex.w-100.justify-content-between
+                div
+                    h3.mb-1 #{i}위              관광지명
+                br
+                br
+                div
+                    img(src='https://t1.daumcdn.net/cfile/tistory/991C31365B7BE8B837' style='width : 200px; height : 200px; float:left; margin-right:20px;')
+                    img(src='https://www.siheung.go.kr/portal/images/sub08/img010501_01.jpg' style='width : 200px; height : 200px; ')
+                br
+                br
+                button.btn.btn-warning.float-right.mr-3(type="submit" ) 음식점 순위
+                button.btn.btn-dark.float-right.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 자세히 보기
+                br
+                p.mb-1 총 점수 :  10점 만점에 7.096
+                br
+                
+                br
+                br
+                .panel-collapse.collapse.in(id=`${i}`)
+                    .panel-body
+                        h6 | 상세 정보 : ??????????
+                        br
+                        br
 
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 5위
-                h3.mb-1 ??
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 5.6
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseFour")  자세히 보기
-            #collapseFour.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 서울동물원은 동물과 자연보전의 의미 , 동물에게 더 행복해지는 동물원을 만들고자 노력하고 있으며 동물원의 기능인 전시, 보전, 교육 , 연구에 힘쓰고 있습니다
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 6위
-                h3.mb-1 ???
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 5.6
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseFour")  자세히 보기
-            #collapseFour.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 서울동물원은 동물과 자연보전의 의미 , 동물에게 더 행복해지는 동물원을 만들고자 노력하고 있으며 동물원의 기능인 전시, 보전, 교육 , 연구에 힘쓰고 있습니다
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 7위
-                h3.mb-1 ???
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 5.6
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseFour")  자세히 보기
-            #collapseFour.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 서울동물원은 동물과 자연보전의 의미 , 동물에게 더 행복해지는 동물원을 만들고자 노력하고 있으며 동물원의 기능인 전시, 보전, 교육 , 연구에 힘쓰고 있습니다
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-        
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 8위
-                h3.mb-1 ???
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 ??
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseFour")  자세히 보기
-            #collapseFour.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 서울동물원은 동물과 자연보전의 의미 , 동물에게 더 행복해지는 동물원을 만들고자 노력하고 있으며 동물원의 기능인 전시, 보전, 교육 , 연구에 힘쓰고 있습니다
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 9위
-                h3.mb-1 ???
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 ??
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseFour")  자세히 보기
-            #collapseFour.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 서울동물원은 동물과 자연보전의 의미 , 동물에게 더 행복해지는 동물원을 만들고자 노력하고 있으며 동물원의 기능인 전시, 보전, 교육 , 연구에 힘쓰고 있습니다
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
-        
-        a.list-group-item.list-group-item-action(href='#')
-            .d-flex.w-100.justify-content-between
-                h3.mb-1 10위
-                h3.mb-1 ???
-                small.text-muted 3 days ago
-            p.mb-1 Some placeholder content in a paragraph.
-            small.text-muted 총 점수는 10점 만점에 ??
-            br
-            br
-            button.btn.btn-warning.float-right(type="submit") 음식점 순위
-            button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href="#collapseFour")  자세히 보기
-            #collapseFour.panel-collapse.collapse.in
-                .panel-body
-                    | 상세 정보 : 서울동물원은 동물과 자연보전의 의미 , 동물에게 더 행복해지는 동물원을 만들고자 노력하고 있으며 동물원의 기능인 전시, 보전, 교육 , 연구에 힘쓰고 있습니다
-                    br
-                    br
-                    br
-                    br
-                    | 편의 시설 정보 : 휠체어 진입 , 승강기
+                        h6 | 편의 시설 정보 : ??????
         
 
 

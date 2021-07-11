@@ -2,53 +2,33 @@ doctype html
 html 
     include includes/head.pug 
     body 
-        
-        .wrapper_total 
-            .container.py-3
-                .title.h1.text-center 음식점 순위
-                // Card Start
-                .card
-                    .row
-                        .col-md-7.px-3
-                            .card-block.px-6
-                                h4.card-title 음식점 명
-                                br
-                                p.card-text
-                                    | 음식점 내용
+    .list-group
+        -var i = 0
+        -for(var i =1; i<11; i++)
+            a.list-group-item.list-group-item-action( aria-current='')
+                .d-flex.w-100.justify-content-between
+                div
+                    h3.mb-1 #{i}위              음식점명
+                br
+                br
+                div
+                    img(src='https://www.gyeongju.go.kr/upload/content/thumb/20200429/93BDFF77B5EF4FDFAE6F61641E926F7E.jpg'  style='width : 200px; height : 200px; float:left; margin-right:20px;' )
+                    img(src='https://www.gyeongju.go.kr/upload/content/thumb/20200429/93BDFF77B5EF4FDFAE6F61641E926F7E.jpg' style='width : 200px; height : 200px;' )
+                
+                br
+                br
+                button.btn.btn-info.float-right(type="submit") 호텔 순위
+                button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 자세히 보기
+                br
+                h5 총 점수 :  10점 만점에 7.096
+                br
+                br
 
-                            .row
-                                .col-12 
-                                      button.btn.btn-success.float-right(type='button' value='근처 호텔 보기') 호텔 보기
-                    
-                // End of card
-
-                br
-                br
-                .card
-                    .row
-                        .col-md-7.px-3
-                            .card-block.px-6
-                                h4.card-title 음식점 명
-                                br
-                                p.card-text
-                                    | 음식점 내용
-
-                            .row
-                                .col-12 
-                                      button.btn.btn-success.float-right(type='button' value='근처 호텔 보기') 호텔 보기
-                br
-                br
-                .card
-                    .row
-                        .col-md-7.px-3
-                            .card-block.px-6
-                                h4.card-title 음식점 명
-                                br
-                                p.card-text
-                                    | 음식점 내용
-
-                            .row
-                                .col-12 
-                                      button.btn.btn-success.float-right(type='button' value='근처 호텔 보기') 호텔 보기
-                br
-                br
+                .panel-collapse.collapse.in(id=`${i}`)
+                    .panel-body
+                        h6 | 주소 : ???
+                        br
+                        br
+                        br
+                        br
+                        h6 | 편의 시설 정보 : 휠체어 진입가능 , 승강기 있음, 장애인 전용 주차장 있음

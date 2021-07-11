@@ -2,31 +2,33 @@ doctype html
 html 
     include includes/head.pug
     body
-    #accordionFlushExample.accordion.accordion-flush
-        .accordion-item
-            h2#flush-headingOne.accordion-header
-                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne')
-                    | Accordion Item #1
-            #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
-                .accordion-body
-                    | Placeholder content for this accordion, which is intended to demonstrate the 
-                    code .accordion-flush
-                    |  class. This is the first item&apos;s accordion body.
-        .accordion-item
-            h2#flush-headingTwo.accordion-header
-                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo')
-                    | Accordion Item #2
-            #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo' data-bs-parent='#accordionFlushExample')
-                .accordion-body
-                    | Placeholder content for this accordion, which is intended to demonstrate the 
-                    code .accordion-flush
-                    |  class. This is the second item&apos;s accordion body. Let&apos;s imagine this being filled with some actual content.
-        .accordion-item
-            h2#flush-headingThree.accordion-header
-                button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls='flush-collapseThree')
-                    | Accordion Item #3
-            #flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree' data-bs-parent='#accordionFlushExample')
-                .accordion-body
-                    | Placeholder content for this accordion, which is intended to demonstrate the 
-                    code .accordion-flush
-                    |  class. This is the third item&apos;s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+    .list-group
+        -var i = 0
+        -for(var i =1; i<11; i++)
+            a.list-group-item.list-group-item-action( aria-current='')
+                .d-flex.w-100.justify-content-between
+                div
+                    h3.mb-1 #{i}위 호텔 명
+                br
+                br
+                div
+                    img.img-rounded(src='https://exp.cdn-hotels.com/hotels/1000000/20000/15100/15031/c2394f75_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium' style='width : 200px; height : 200px; float:left; margin-right:20px;' )
+                    img.img-rounded(src='https://exp.cdn-hotels.com/hotels/1000000/20000/15100/15031/c2394f75_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium' style='width : 200px; height : 200px;' )
+                        
+                br
+                br
+                button.btn.btn-success.float-right(type="submit") 최종 코스 
+                button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 자세히 보기
+                br
+                h5 총 점수 :  10점 만점에 7.096
+                br
+                br
+ 
+                .panel-collapse.collapse.in(id=`${i}`)
+                    .panel-body
+                        h6 | 주소 : 
+                        br
+                        br
+                        br
+                        br
+                        h6 | 편의 시설 정보 : 휠체어 진입가능 , 승강기 있음, 장애인 전용 주차장 있음

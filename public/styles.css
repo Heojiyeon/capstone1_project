@@ -126,6 +126,7 @@ header > h2 {
     transform: rotate(-360deg);
   }
 }
+/* loading */
 
 
 
@@ -138,10 +139,11 @@ header > h2 {
 }
 
 p{
-  color: #fff;
+  color : black;
+  font-size: 20px;
 }
 
-/* loading */
+
 
 body {
   padding-left: 15% !important;
@@ -199,78 +201,21 @@ div.notice_signup{
   background: white;
 }
 
-/* signup */
-.py-5.text-center{
-  padding-bottom: 0em !important;
-}
-div.container.form-signup {
-  float: center;
+p.mb-1 {
+  font-size: 20px;
 }
 
-button.btn.btn-primary.find-department{
-  width: 100%;
+.list-group{
+  border-radius: 10px;
+  border : 1px solid;
+
 }
 
-/* searches */
+a.list-group-item.list-group-item-action{
 
-.search-project-date{
-  text-align: right;
+  border : 1px solid;
 }
 
-input#userdate{
-  text-align: right;
-}
-
-.row.sidebar{
-  height: 130em;
-}
-
-.table-employee-attr{
-  width: 40%;
-}
-
-/* user edit */
-select#departmentSelect.custom-select{
-  width: 38.5em;
-}
-
-
-/* card */
-.card {
-  color: black;
-}
-
-.card-text{
-  color: black;
-}
-
-.title {
- 
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
-
-.card-block {
-    font-size: 1em;
-    position: relative;
-    margin: 0;
-    padding: 1em;
-    border: none;
-    border-top: 1px solid rgba(34, 36, 38, .1);
-    box-shadow: none;
-     
-}
-.card {
-    font-size: 1em;
-    overflow: hidden;
-    padding: 5;
-    border: none;
-    border-radius: .28571429rem;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    margin-top:20px;
-    color: black;
-}
-
-.btn {
-  margin-top: auto;
+.img{
+  display: inline-block;
 }
