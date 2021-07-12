@@ -1,7 +1,26 @@
-doctype html 
-html 
-    include includes/head.pug
-    body
-        p 여기는 마지막 화면에서 1위한 것들을 코스로 보여주는 부분이다! 
-        .wrapper_total_last
+extends includes/layout.pug
+block content
+    .wrapper_total_last
+        h5 최종 추천 코스
+            ul
+                li.rank_1_tour 관광지
+                li= uc[0].NAME
+                li= uc[0].ADDRESS1
+                img(src= uc[0].IMAGE1 style='width : 300px; height : 300px; float:left; margin-right:20px;')
+                button#con 편의시설 확인하기
+            ul 
+                li.rank_1_res 음식점
+                li= uc[1].NAME
+                li= uc[1].ADDRESS1
+                img(src= uc[1].IMG1 style='width : 300px; height : 300px; float:right; margin-right:20px;')
+                button#con 편의시설 확인하기
+        
+        -if (uc[2] != null) 
+            ul
+                li.rank_1_hotel 숙박시설
+                li= uc[2].NAME
+                li= uc[2].ADDRESS1
             
+        //-     img(src="./images/p1.jpg" width="310")
+        //-     img(src="./images/p2.jpg" width="320")
+        //-     img(src="./images/p3.jpg" width="295")

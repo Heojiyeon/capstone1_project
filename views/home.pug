@@ -1,11 +1,12 @@
-doctype html 
-html 
-    include includes/head.pug
-    body 
-        .main
-            h1 여행을 시작해볼까요 ?
+extends includes/layout.pug
+block content
+    .main
+        h1 여행을 시작해볼까요 ?
             .enjoy
                 a(href="/login")
                     button#login LOGIN 
                 a(href="/join")
                     button#join JOIN
+            .extra
+                a(href="/question")
+                    button#question 로그인 없이 시작하기

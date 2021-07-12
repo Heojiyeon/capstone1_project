@@ -1,11 +1,9 @@
-doctype html 
-html 
-    include includes/head.pug
-    body 
-    .wrapper_question 
+extends includes/layout.pug
+block content
+    .wrapper_question
         form(action="/reply", method="post") 
             p#answer_disabled 어떤 불편을 겪고 계신가요?
-                br  
+                br
                 input(type="checkbox", name="disabled", value="visual")
                 label(for="visual") 시각 
                 input(type="checkbox", name="disabled", value="hearing")
@@ -17,10 +15,10 @@ html
                 input(type="checkbox", name="tourplace", value="nature")
                 label(for="visual") 자연/휴양 
                 input(type="checkbox", name="tourplace", value="history")
-                label(for="visual") 역사 
-                input(type="checkbox", name="tourplace", value="industry")
-                label(for="visual") 문화
+                label(for="visual") 역사
                 input(type="checkbox", name="tourplace", value="culture")
+                label(for="visual") 문화
+                input(type="checkbox", name="tourplace", value="industry")
                 label(for="visual") 산업/건축 
                 input(type="checkbox", name="tourplace", value="shopping")
                 label(for="visual") 쇼핑 
@@ -36,4 +34,4 @@ html
                 label(for="visual") 네
                 input(type="checkbox", name="needHotel", value="0")
                 label(for="visual") 아니오
-            button 결과 확인하기
+            button.btn.btn-light.btn-block 결과 확인하기

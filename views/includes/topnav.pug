@@ -1,0 +1,20 @@
+.header.clearfix
+  nav.navbar.navbar-expand-md.navbar-light.bg-light.fixed-top
+    .container
+      a.navbar-brand(href="/") MUYAHO
+      button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarsExampleDefault", aria-controls="navbarsExampleDefault", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+
+      #navbarsExampleDefault.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='/login') Signin
+            li.nav-item
+              a.nav-link(href='/join') Signup
+            li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') 더 보기
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='#') 처음으로
+                    a.dropdown-item(href='#') 여행 후기
+                    .dropdown-divider
+                    a.dropdown-item(href='#')

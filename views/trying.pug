@@ -1,8 +1,8 @@
-//- extends layout.pug
+extends layout.pug
 block content
     .info-container
         ul
-            each val in for_front
+            each val in for_front_t
                 li= JSON.stringify(val.rank) + "위"
                 li= JSON.stringify(val.name)
                 li= "총 점수는 10점 만점에 " + JSON.stringify(val.rscore)
@@ -14,9 +14,3 @@ block content
                     a(href="/tryingres") 음식점 선택하러 가기 !
             else 
                 li 값이 안보여요!
-
-    //- .info-container2
-    //-     ul 
-    //-         each val in for_front 
-    //-             form(method="get", action="/")
-        //- p !{ten}
