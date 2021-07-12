@@ -11,6 +11,7 @@ body {
   background-image: url("./images/travel24.jpg");
   background-repeat : no-repeat;
   background-size : cover;
+  background-attachment: fixed;
 }
 
 header {
@@ -28,8 +29,8 @@ i.fab.fa-accessible-icon{
 
 .main > h1 {
   position: relative;
-  top: 55px;
-  left: 576px;
+  top: 60px;
+  left: 210px;
   color: #774a2a;
   /* font-family: 'Black Han Sans', sans-serif; */
   font-family: 'MapoAgape';
@@ -40,7 +41,7 @@ i.fab.fa-accessible-icon{
 h1 {
   position: relative;
   top: 55px;
-  left: 576px;
+  left: 200px;
   color: #774a2a;
   /* font-family: 'Black Han Sans', sans-serif; */
   font-family: 'MapoAgape';
@@ -49,8 +50,8 @@ h1 {
 }
 .main > h2{
   position: relative;
-  bottom: 65px;
-  left: 557px;
+  bottom: 75px;
+  left: 190px;
   color: #ffffff;
   /* font-family: 'Black Han Sans', sans-serif; */
   font-family: 'ON-여씨향약언해R';
@@ -61,8 +62,9 @@ h1 {
 h4{
   color: #422918;
   position: relative;
-  top: 80px;
-  left: 680px;
+  top: 20px;
+  left: 295px;
+  /* text-align: center; */
   font-size: 60px;
   font-family: 'ON-여씨향약언해R';
   /* text-shadow: -2px 0 #422918, 0 2px #422918, 2px 0 #422918, 0 -2px #422918; */
@@ -70,8 +72,8 @@ h4{
 h5{
   color: #422918;
   position: relative;
-  top: 80px;
-  left: 610px;
+  /* top: 10px; */
+  left: 240px;
   font-size: 60px;
   font-family: 'ON-여씨향약언해R';
   /* text-shadow: -2px 0 #422918, 0 2px #422918, 2px 0 #422918, 0 -2px #422918; */
@@ -104,19 +106,33 @@ h5{
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'paybooc-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+ }
 .enjoy {
   padding: var(--micro-size);
 }
 
 .enjoy{
   position: relative;
-  top: 100px;
-  left: 6px;
+  top: 95px;
+  right: 85px;
 }
 .wrapper_login{
   position: relative;
   top:260px;
-  left:115px;
+  left:18px;
   /* right: 120px; */
 }
 button#start{
@@ -137,20 +153,21 @@ button#start{
 .wrapper_question{
   position: relative;
   top: 80px;
-  left: 600px;
+  right: 30px;
   font-family: 'GyeonggiBatang';
   /* background-color: #ffffff; */
   font-size: 1.5em;
   line-height: 45px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 button{
   position: relative;
   top: 100%;
   left: 37%;
-  background:#3c56c750;
-  color:#fff;
+  font-weight: bold;
+  background:#3c56c75d;
+  color:rgba(255, 255, 255, 0.74);
   border: solid;
   border-top-width : 2px;
   border-color: #3c56c76b;
@@ -196,19 +213,21 @@ button#result{
 .wrapper_login {
   position: relative;
   top: 150px;
-  left: 100px;
+  /* left: 100px; */
 }
 .wrapper_question{
   position: relative;
-  top:220px;
-  left:90px;
+  top:100px;
+  right:10px;
   border-radius: 20px;
+  font-family: 'paybooc-Bold';
+  /* background-color: #fff; */
   /* right: 120px; */
 }
 input[type="text"]{
   position: relative;
-  bottom: 70px;
-  left:522px;
+  bottom: 120px;
+  left:260px;
   width: 250px;
   height: 60px;
   /* border: none; */
@@ -219,8 +238,8 @@ input[type="text"]{
 }
 input[type="password"]{
   position: relative;
-  bottom:65px;
-  left:522px;
+  bottom:115px;
+  left:260px;
   width: 250px;
   height: 60px;
   /* border:[ none; */
@@ -241,16 +260,18 @@ p#p1,p#p2,p#p3{
 }
 p#answer_disabled,p#answer_tourplace,p#answer_tourplace,p#answer_tourplace{
   position: relative;
-  bottom:72px;
-  left:510px;
+  bottom:30px;
+  left:160px;
   background-color: #ffffff;
-  width: 370px;
-  opacity: 0.75;
+  width: 500px;
+  opacity: 0.7;
   text-align: center;
-  font-weight: 600;
+  /* font-weight: 600; */
+  /* zoom: 1.5; */
 }
 button#result{
   font-size: 1em;
+  font-weight: 800;
 }
 
 button#login2{
@@ -266,9 +287,15 @@ button#login2{
 }
 .wrapper_total_last > button{
   position: relative;
-  right: 300px;
+  right: 600px;
 }
 
+/* .wrapper_total_last > form#form_result_res{
+  font-family: 'GyeonggiBatang';
+  position: relative;
+  top: 500px;
+  left: 570px;
+} */
 .wrapper_total_last > form#form_result_res{
   font-family: 'GyeonggiBatang';
   position: relative;
@@ -276,6 +303,21 @@ button#login2{
   left: 570px;
 }
 
+button#con1{
+  position: relative;
+  right: 600px;
+  top: 400px;
+}
+button#con2{
+  position: relative;
+  right:500px;
+  top: 400px;
+}
+button#con3{
+  position: relative;
+  right:300px;
+  top: 400px;
+}
 ul{
   margin: 0px;
   padding: 0px;
@@ -286,50 +328,358 @@ li.rank_1_tour{
   /* margin:0px;
   margin-right: 20px;
   padding: 0px; */
-  background-color: #ffffff;
-  width:330px;
+  /* background-color: #ffffff; */
+  width:320px;
   position: relative;
-  right: 295px;
-  bottom:40px;
+  right: 530px;
+  bottom:247px;
   font-size: 1.3em;
   opacity: 0.85;
   text-align: center;
   font-weight: 600;
   line-height: 25px;
+  font-family: 'paybooc-Bold';
 }
 li.rank_1_res{
   /* margin:0px;
   margin-right: 20px;
   padding: 0px; */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   width:330px;
   position: relative;
-  left:50px;
-  bottom: 147px;
+  right:175px;
+  bottom: 370px;
   font-size: 1.3em;
   opacity: 0.85;
   text-align: center;
   font-weight: 600;
   line-height: 25px;
+  font-family: 'paybooc-Bold';
 }
 li.rank_1_hotel{
   /* margin:0px;
   margin-right: 20px;
   padding: 0px; */
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   width:330px;
   position: relative;
-  right: 290px;
-  bottom: 45px;
+  left:175px;
+  bottom: 445px;
   font-size: 1.3em;
   opacity: 0.85;
-
-  /* text-align: center; */
+  text-align: center;
+  font-weight: 600;
+  line-height: 25px;
+  font-family: 'paybooc-Bold';
 }
+/* 
 img{
   position: relative;
   top:0px;
   left:280px;
   float: left;
   margin-right: 35px;
+} */
+
+.wrapper_total_last > input#check-btn { display: none; }
+.wrapper_total_last > input#check-btn:checked ~ .menubars { display: block; } 
+.menubars { display: none; }
+
+/* label{
+  position: relative;
+  top:600px;
+  left: 400px;
+  font-family: 'GyeonggiBatang';
+} */
+ul.menubars{
+  position: relative;
+  top:600px;
+  left: 400px;
+  font-family: 'GyeonggiBatang';
+}
+/* input#check-btn{
+  position: relative;
+  top:300px;
+} */
+
+/* 여기서부터 민찬 */
+/* loading */
+.wrapper_loading{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 7px dotted #e74c3c;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation1 2s linear infinite;
+}
+
+.loading::after,
+.loading::before{
+  content: '';
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.loading::after{
+  border-top: 7px dotted #e67e22;
+  transform: rotate(120deg);
+}
+
+.loading::before{
+  border-top: 7px dotted #2980b9;
+  transform: rotate(-120deg);
+}
+
+.loading span {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  animation: rotation2 2s linear infinite;
+}
+
+@keyframes rotation1{
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation2 {
+  to{
+    transform: rotate(-360deg);
+  }
+}
+/* loading */
+
+
+
+.wrapper_total{
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+
+
+
+}
+
+p{
+  color : black;
+  font-size: 20px;
+}
+
+
+
+body {
+  /* padding-bottom: 5%; */
+  padding-left: 23% !important;
+  padding-right: 23% !important;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* font-family:'GyeonggiBatang'; */
+  float: center;
+}
+
+/* main_body */
+
+.jumbotron.p-3.text-white.rounded.bg-dark.main-image > img {
+  max-height: 500px!important;
+  width: 100%;
+}
+
+div.header.clearfix{
+  padding-top: 4em;
+}
+
+div > .featurette-image{
+  width: 100%;
+}
+
+/* footer */
+.footer{
+  text-align: center;
+}
+
+/* others */
+hr.featurette-divider{
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* signin */
+h3.form-signin-heading{
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.form-signin {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/* .form-signin > input, button{
+  margin-bottom: 2em;
+} */
+
+div.notice_signup{
+  text-align: right;
+}
+
+.jumbotron {
+  background: rgba(255, 255, 255, 0.514);
+}
+
+p.mb-1 {
+  font-size: 20px;
+  position: relative;
+  /* left:45px; */
+  right:255px;
+  bottom: 35px;
+  font-family: 'paybooc-Bold';
+  font-size: 1.6em;
+}
+
+p.mb-2 {
+  font-size: 20px;
+  position: relative;
+  /* left:45px; */
+  right:222px;
+  bottom: 30px;
+  font-family: 'paybooc-Bold';
+  font-size: 1em;
+}
+
+.list-group{
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #000000;
+  /* box-shadow: 2px 2px 10px rgba(15, 8, 8, 0.342) inset; */
+  /* position: relative; */
+  /* right:200px; */
+
+}
+
+a.list-group-item.list-group-item-action{
+
+  border : 1px solid;
+  /* position: relative; */
+  /* right:200px; */
+}
+
+/* 유정 추가 */
+
+h3{
+  font-family:'GyeonggiBatang';
+  font-weight: 600;
+}
+
+
+a.list-group-item.list-group-item-action > button.btn.btn-dark.float-left.mr-3[type="submit"]{
+  position: relative;
+  bottom: 30px;
+  left: 250px;
+  background-color: rgb(28, 37, 75);
+}
+a.list-group-item.list-group-item-action > button.btn.btn-.float-left.mr-3[type="submit"]{
+  position: relative;
+  bottom: 30px;
+  left: 250px;
+  /* color: #fff; */
+  font-weight: bold;
+  background-color: rgb(216, 117, 117);
+}
+a.list-group-item.list-group-item-action > button.btn.btn-warning.float-left.mr-3[type="submit"]{
+  position: relative;
+  bottom: 30px;
+  left: 250px;
+  font-weight: 600;
+}
+
+h6{
+  position: relative;
+  left: 10px;
+  bottom: 60px;
+  /* font-family: 'paybooc-Bold'; */
+}
+h7{
+  position: relative;
+  left: 210px;
+  bottom: 80px;
+  color: #ff0000;
+  /* font-family: 'NanumBarunGothic'; */
+}
+
+input.t1{
+  background: url( "images/h1.png" ) no-repeat;
+  background-color: transparent;
+  height: 150px;
+  width: 150px;
+  position:fixed;
+  top:330px;
+  right:1270px;
+  border-style: none;
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
+  filter: opacity(.5) drop-shadow(0 0 0 rgb(78, 56, 16));
+  
+
+}
+
+input.t2{
+  background: url( "images/h2.png" ) no-repeat;
+  background-color: transparent;
+  height: 150px;
+  width: 150px;
+  position: fixed;
+  top:330px;
+  left:1280px;
+  border-style: none;
+  -webkit-filter: opacity(.5) drop-shadow(0 0 0 gray);
+  filter: opacity(.5) drop-shadow(0 0 0 rgb(78, 56, 16));
+}
+
+label{
+  display:inline-block;
+  width: 105px;
+}
+.wrapper_total_last{
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 10px;
+  width: 1100px;
+  height: 470px;
+  position: relative;
+  right: 135px;
+  top:30px;
+
+}
+
+.wrapper_total_last > img{
+  position: relative;
+  left:35px;
+  bottom: 250px;
+  margin-right: 50px;
+}
+
+label[for='check-btn']{
+  position: relative;
+  left:100px;
+  top:420px;
+  border: steelblue;
+  width: 300px;
 }

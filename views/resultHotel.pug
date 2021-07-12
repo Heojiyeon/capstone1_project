@@ -1,22 +1,91 @@
+//- doctype html 
+//- html 
+//-     include includes/head.pug
+//-     body
+//-         p 여기는 추천 숙박시설 1- 10위 순위로 나올 부분이다!  
+//-         .wrapper_total 
+//-             form#form_result_res(action="/resultRes", method="get")   
+//-                 ul.rank_hotel 
+//-                     li.rank_1_tour 1위
+//-                     li.rank_2_tour 2위
+//-                     li.rank_3_tour 3위
+//-                     li.rank_4_tour 4위
+//-                     li.rank_5_tour 5위
+//-                     li.rank_6_tour 6위
+//-                     li.rank_7_tour 7위
+//-                     li.rank_8_tour 8위
+//-                     li.rank_9_tour 9위
+//-                     li.rank_10_tour 10위
+//-         form(action="/viewCourse", method="get") 
+//-             button 관광코스 한눈에 보기
+//-         form(action="/replay", method="get")
+//-             button 새로운 추천 받기
+//- doctype html 
+//- html 
+//-     include includes/head.pug
+//-     body
+//-     .list-group
+//-         -var i = 0
+//-         -for(var i =1; i<11; i++)
+//-             a.list-group-item.list-group-item-action( aria-current='')
+//-                 .d-flex.w-100.justify-content-between
+//-                 div
+//-                     h3.mb-1 #{i}위 호텔 명
+//-                 br
+//-                 br
+//-                 div
+//-                     img.img-rounded(src='https://exp.cdn-hotels.com/hotels/1000000/20000/15100/15031/c2394f75_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium' style='width : 200px; height : 200px; float:left; margin-right:20px;' )
+//-                     img.img-rounded(src='https://exp.cdn-hotels.com/hotels/1000000/20000/15100/15031/c2394f75_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium' style='width : 200px; height : 200px;' )
+                        
+//-                 br
+//-                 br
+//-                 button.btn.btn-success.float-right(type="submit") 최종 코스 
+//-                 button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 자세히 보기
+//-                 br
+//-                 h5 총 점수 :  10점 만점에 7.096
+//-                 br
+//-                 br
+ 
+//-                 .panel-collapse.collapse.in(id=`${i}`)
+//-                     .panel-body
+//-                         h6 | 주소 : 
+//-                         br
+//-                         br
+//-                         br
+//-                         br
+//-                         h6 | 편의 시설 정보 : 휠체어 진입가능 , 승강기 있음, 장애인 전용 주차장 있음
+
 doctype html 
 html 
     include includes/head.pug
-    body
-        p 여기는 추천 숙박시설 1- 10위 순위로 나올 부분이다!  
-        .wrapper_total 
-            form#form_result_res(action="/resultRes", method="get")   
-                ul.rank_hotel 
-                    li.rank_1_tour 1위
-                    li.rank_2_tour 2위
-                    li.rank_3_tour 3위
-                    li.rank_4_tour 4위
-                    li.rank_5_tour 5위
-                    li.rank_6_tour 6위
-                    li.rank_7_tour 7위
-                    li.rank_8_tour 8위
-                    li.rank_9_tour 9위
-                    li.rank_10_tour 10위
-        form(action="/viewCourse", method="get") 
-            button 관광코스 한눈에 보기
-        form(action="/replay", method="get")
-            button 새로운 추천 받기
+    body 
+    .list-group
+        -var i = 0
+        -for(var i =1; i<11; i++)
+            a.list-group-item.list-group-item-action( aria-current='')
+                .d-flex.w-100.justify-content-between
+                div
+                    h3.mb-1 #{i}위              "조선호텔"
+                br
+                br
+                div
+                    img(src='https://exp.cdn-hotels.com/hotels/1000000/20000/15100/15031/c2394f75_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium' style='width : 200px; height : 200px; float:left;')
+                    //- img(src='https://www.siheung.go.kr/portal/images/sub08/img010501_01.jpg' style='width : 200px; height : 200px; ')
+                br
+                br
+                button.btn.btn-dark.float-left.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 편의시설 보기
+                button.btn.btn-warning.float-left.mr-3(type="submit" ) 최종코스 보러가기!
+                br
+                p.mb-1 총 점수: 7.621점
+                p.mb-2 (＊10점 만점)
+                br
+                
+                br
+                br
+                h6 ※ 주소: 서울 서대문구 연희로 171
+                .panel-collapse.collapse.in(id=`${i}`)
+                    .panel-body
+                        
+                        br
+                        br
+                        h7 ※ 편의시설 정보: 휠체어 진입가능 , 승강기 있음, 장애인 전용 주차장 있음

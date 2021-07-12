@@ -1,46 +1,115 @@
+//- doctype html 
+//- html 
+//-     include includes/head.pug 
+//-     body 
+//-         p 여기는 추천 음식점 1- 10위 순위로 나올 부분이다! 
+//-         .wrapper_total 
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_1_res 1위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_2_res 2위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_3_res 3위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_4_res 4위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_5_res 5위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_6_res 6위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_7_res 7위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_8_res 8위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_9_res 9위
+//-                         button 주변 숙박시설 살펴보기
+//-             form#form_result_res(action="/resultHotel", method="get")   
+//-                 ul.rank_total 
+//-                     li.rank_10_res 10위
+//-                         button 주변 숙박시설 살펴보기
+//- doctype html 
+//- html 
+//-     include includes/head.pug 
+//-     body 
+//-     .list-group
+//-         -var i = 0
+//-         -for(var i =1; i<11; i++)
+//-             a.list-group-item.list-group-item-action( aria-current='')
+//-                 .d-flex.w-100.justify-content-between
+//-                 div
+//-                     h3.mb-1 #{i}위              음식점명
+//-                 br
+//-                 br
+//-                 div
+//-                     img(src='https://www.gyeongju.go.kr/upload/content/thumb/20200429/93BDFF77B5EF4FDFAE6F61641E926F7E.jpg'  style='width : 200px; height : 200px; float:left; margin-right:20px;' )
+//-                     img(src='https://www.gyeongju.go.kr/upload/content/thumb/20200429/93BDFF77B5EF4FDFAE6F61641E926F7E.jpg' style='width : 200px; height : 200px;' )
+                
+//-                 br
+//-                 br
+//-                 button.btn.btn-info.float-right(type="submit") 호텔 순위
+//-                 button.btn.btn-dark.float-right(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 자세히 보기
+//-                 br
+//-                 h5 총 점수 :  10점 만점에 7.096
+//-                 br
+//-                 br
+
+//-                 .panel-collapse.collapse.in(id=`${i}`)
+//-                     .panel-body
+//-                         h6 | 주소 : ???
+//-                         br
+//-                         br
+//-                         br
+//-                         br
+//-                         h6 | 편의 시설 정보 : 휠체어 진입가능 , 승강기 있음, 장애인 전용 주차장 있음
+
 doctype html 
 html 
-    include includes/head.pug 
+    include includes/head.pug
     body 
-        p 여기는 추천 음식점 1- 10위 순위로 나올 부분이다! 
-        .wrapper_total 
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_1_res 1위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_2_res 2위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_3_res 3위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_4_res 4위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_5_res 5위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_6_res 6위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_7_res 7위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_8_res 8위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_9_res 9위
-                        button 주변 숙박시설 살펴보기
-            form#form_result_res(action="/resultHotel", method="get")   
-                ul.rank_total 
-                    li.rank_10_res 10위
-                        button 주변 숙박시설 살펴보기
+    .list-group
+        -var i = 0
+        -for(var i =1; i<11; i++)
+            a.list-group-item.list-group-item-action( aria-current='')
+                .d-flex.w-100.justify-content-between
+                div
+                    h3.mb-1 #{i}위              "대원갈비탕"
+                br
+                br
+                div
+                    img(src='https://www.gyeongju.go.kr/upload/content/thumb/20200429/93BDFF77B5EF4FDFAE6F61641E926F7E.jpg' style='width : 200px; height : 200px; float:left;')
+                    //- img(src='https://www.siheung.go.kr/portal/images/sub08/img010501_01.jpg' style='width : 200px; height : 200px; ')
+                br
+                br
+                button.btn.btn-dark.float-left.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 편의시설 보기
+                button.btn.btn-warning.float-left.mr-3(type="submit" ) 이 음식점 선택!
+                br
+                p.mb-1 총 점수: 8.15점
+                p.mb-2 (＊10점 만점)
+                br
+                
+                br
+                br
+                h6 ※ 주소: 서울 종로구 종로3가길 33-3
+                .panel-collapse.collapse.in(id=`${i}`)
+                    .panel-body
+                        
+                        br
+                        br
+                        h7 ※ 편의시설 정보: 휠체어 진입가능 , 승강기 있음, 장애인 전용 주차장 있음

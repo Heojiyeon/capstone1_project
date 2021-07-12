@@ -1,46 +1,37 @@
 doctype html 
 html 
     include includes/head.pug
-    body 
-        p 여기는 추천 관광지 1- 10위 순위로 나올 부분이다!    
-        .wrapper_total 
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_1_tour 1위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_2_tour 2위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_3_tour 3위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_4_tour 4위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_5_tour 5위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_6_tour 6위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_7_tour 7위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_8_tour 8위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_9_tour 9위
-                        button 주변 음식점 살펴보기
-            form#form_result_res(action="/resultRes", method="get")  
-                ul.rank_total 
-                    li.rank_10_tour 10위
-                        button 주변 음식점 살펴보기
+    body
+    form
+        input(type='button' class='t1' onClick='history.go(-1)' )
+        input(type='button' class='t2' onClick='history.go(1)')
+    .list-group
+        -var i = 0
+        -for(var i =1; i<11; i++)
+            a.list-group-item.list-group-item-action( aria-current='')
+                .d-flex.w-100.justify-content-between
+                div
+                    h3.mb-1 #{i}위              "세종문화회관"
+                br
+                br
+                div
+                    img(src='https://t1.daumcdn.net/cfile/tistory/991C31365B7BE8B837' style='width : 200px; height : 200px; float:left;')
+                br
+                br
+                button.btn.btn-dark.float-left.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 편의시설 보기
+                button.btn.btn-warning.float-left.mr-3(type="submit" ) 이 관광지로 선택!
+                br
+                p.mb-1 총 점수 : 7.096점      
+                p.mb-2 (＊10점 만점)
+                br
+                
+                br
+                br
+                h6 ※ 상세 정보 : 세종 문화회관은 시민의 문화향수 기회를 확대하고 문화창달에 기여할 수 있기 위해 1999년 7월 1일 재단법인으로 출범하였다.
+                .panel-collapse.collapse.in(id=`${i}`)
+                    .panel-body
+                        
+                        br
+                        br
+                        h7 ※ 편의 시설 정보 : 주출입구는 단차가 없어 휠체어 접근 가능함
+        
