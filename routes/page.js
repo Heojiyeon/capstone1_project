@@ -19,11 +19,6 @@ router.get('/', (req, res) => {
 
 // 로그인 후 진행되는 시나리오...
 
-// 0. 로그인 후 화면
-router.get('/start'), (req, res) => {
-    res.render('main');
-}
-
 // 1. 사용자 인풋 화면
 router.get('/question', (req, res) => {
     res.render('question');
@@ -38,7 +33,8 @@ router.post('/reply', async (req, res) => {
     needHotel = req.body.needHotel;
     try {
         await run_al.question_run(disabled, tourplace, wantArea, needHotel);
-        res.redirect('/loading_tour');
+        // res.redirect('/loading_tour');
+        res.redirect('/loading_tour')
 
     } catch (err) {
         console.log("등록 중 에러가 발생했어요!!", err)
@@ -48,13 +44,14 @@ router.post('/reply', async (req, res) => {
 
 // 2. 관광지 추천 로딩
 router.get('/loading_tour', async (req, res) => {
+    // res.render('loading.pug');
     for_front_t = await run_al.tour_run();
     res.redirect('/resultTour');
 });
 
 // 3. 관광지 추천결과
 router.get('/resultTour', async (req, res) => {
-    res.render('resultTour', {
+    res.render('rr', {
         for_front_t : for_front_t
     });
 });

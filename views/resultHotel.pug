@@ -1,5 +1,9 @@
 extends includes/layout.pug
 block content
+    form
+        input(type='button' class='t1' onClick='history.go(-1)')
+        input(type='button' class='t2' onClick='history.go(1)')
+
     .list-group
         each val in for_front_h
             a.list-group-item.list-group-item-action( aria-current='' )
@@ -12,7 +16,7 @@ block content
                 br
                 br
                 div
-                    img(src= val.IMAGE1 style='width : 300px; height : 300px; float:left; margin-right:20px;')
+                    img(src= val.IMAGE1 style='width : 200px; height : 200px; float:left;')
                     //- img(src= val.IMAGE2 style='width : 200px; height : 200px;')
                 br
                 br
