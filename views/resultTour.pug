@@ -1,37 +1,45 @@
-doctype html 
-html 
-    include includes/head.pug
-    body
-    form
-        input(type='button' class='t1' onClick='history.go(-1)' )
-        input(type='button' class='t2' onClick='history.go(1)')
+extends includes/layout.pug
+block content
     .list-group
-        -var i = 0
-        -for(var i =1; i<11; i++)
-            a.list-group-item.list-group-item-action( aria-current='')
+        each val in for_front_t
+            a.list-group-item.list-group-item-action( aria-current='' )
                 .d-flex.w-100.justify-content-between
                 div
-                    h3.mb-1 #{i}위              "세종문화회관"
+                    h3.mb-1= JSON.stringify(val.rank) + "위"            
+                    h3.mb-1= JSON.stringify(val.name)
+                    h3.mb-2= val.ADDRESS1
                 br
                 br
                 div
-                    img(src='https://t1.daumcdn.net/cfile/tistory/991C31365B7BE8B837' style='width : 200px; height : 200px; float:left;')
+                    img(src= val.IMAGE1 style='width : 200px; height : 200px; float:left;')
+                    //- img(src= val.IMAGE2 style='width : 200px; height : 200px;')
                 br
                 br
-                button.btn.btn-dark.float-left.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${i}`) 편의시설 보기
-                button.btn.btn-warning.float-left.mr-3(type="submit" ) 이 관광지로 선택!
+                form(action="/user_choice_tour", method="post")     
+                    button.btn.btn-warning.float-left.mr-3(type="submit" name="user_choice_tour" value=val.id) 이 관광지로 선택!
+                button.btn.btn-dark.float-left.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${val.rank}`) 자세히 보기
                 br
-                p.mb-1 총 점수 : 7.096점      
+                p.mb-1= "총 점수 : " + val.rscore
                 p.mb-2 (＊10점 만점)
                 br
-                
                 br
-                br
-                h6 ※ 상세 정보 : 세종 문화회관은 시민의 문화향수 기회를 확대하고 문화창달에 기여할 수 있기 위해 1999년 7월 1일 재단법인으로 출범하였다.
-                .panel-collapse.collapse.in(id=`${i}`)
+                .panel-collapse.collapse.in(id=`${val.rank}`)
                     .panel-body
-                        
                         br
                         br
-                        h7 ※ 편의 시설 정보 : 주출입구는 단차가 없어 휠체어 접근 가능함
-        
+                        br
+                        br
+                        br
+                        br
+                        br
+                        br
+                        h6.detail= "| 상세 정보 : " 
+                        h6.detail= val.DETAIL
+                        br
+                        h6.detail= "| 개장 시간 : " 
+                        h6.detail= val.TIME
+                        br
+                        h6.detail= "| 편의시설 정보 : " 
+                        h6.detail= val.EXIT
+                        h6.detail= val.RESTROOM
+                        h6.detail= val.ELEVATOR

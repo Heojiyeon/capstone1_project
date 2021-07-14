@@ -1,0 +1,44 @@
+extends includes/layout.pug
+block content
+    form
+        input(type='button' class='t1' onClick='history.go(-1)')
+        input(type='button' class='t2' onClick='history.go(1)')
+
+    .list-group
+        each val in for_front_t
+            a.list-group-item.list-group-item-action( aria-current='' )
+                .d-flex.w-100.justify-content-between
+                div
+                    h3.mb-1= JSON.stringify(val.rank) + "위"            
+                    h3.mb-1= JSON.stringify(val.name)
+                    h3.mb-1= val.ADDRESS1
+                br
+                br
+                div
+                    img(src= val.IMAGE1 style='width : 200px; height : 200px; float:left;')
+                    //- img(src= val.IMAGE2 style='width : 200px; height : 200px;')
+                br
+                br
+                form(action="/user_choice_tour", method="post")     
+                    button.btn.btn-warning.float-right.mr-3(type="submit" name="user_choice_tour" value=val.id) 이 관광지로 선택!
+                button.btn.btn-dark.float-right.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${val.rank}`) 자세히 보기
+                br
+                p.mb-1= "총 점수 : " + val.rscore
+                p.mb-2 (＊10점 만점)
+                br
+                
+                br
+                br
+                h6= "※ 상세 정보 :" + val.DETAIL
+                .panel-collapse.collapse.in(id=`${val.rank}`)
+                    .panel-body
+                        h6= "| 상세 정보 : " + val.DETAIL
+                        br
+                        h6= "| 개장 시간 : " 
+                        h6= val.TIME
+                        br
+                        h6= "| 편의시설 정보 : " 
+                        br 
+                        h6= val.EXIT
+                        h6= val.RESTROOM
+                        h6= val.ELEVATOR

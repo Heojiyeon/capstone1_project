@@ -38,10 +38,10 @@ i.fab.fa-accessible-icon{
   text-shadow: -4px 0 rgb(255, 225, 142), 0 4px rgb(255, 225, 142), 4px 0 rgb(255, 225, 142), 0 -4px rgb(255, 225, 142);
 }
 
-h1 {
+h1.title {
   position: relative;
   top: 55px;
-  left: 200px;
+  left: 210px;
   color: #774a2a;
   /* font-family: 'Black Han Sans', sans-serif; */
   font-family: 'MapoAgape';
@@ -72,7 +72,7 @@ h4{
 h5{
   color: #422918;
   position: relative;
-  /* top: 10px; */
+  top: 20px;
   left: 240px;
   font-size: 60px;
   font-family: 'ON-여씨향약언해R';
@@ -153,7 +153,8 @@ button#start{
 .wrapper_question{
   position: relative;
   top: 80px;
-  right: 30px;
+  /* right: 50px; */
+  left: 0px;
   font-family: 'GyeonggiBatang';
   /* background-color: #ffffff; */
   font-size: 1.5em;
@@ -207,7 +208,7 @@ button:hover:before,button:hover:after{
 }
 button#result{
   position: relative;
-  right: 500px;
+  right: 300px;
 }​
 
 .wrapper_login {
@@ -217,8 +218,8 @@ button#result{
 }
 .wrapper_question{
   position: relative;
-  top:100px;
-  right:10px;
+  top:110px;
+  right:60px;
   border-radius: 20px;
   font-family: 'paybooc-Bold';
   /* background-color: #fff; */
@@ -260,10 +261,10 @@ p#p1,p#p2,p#p3{
 }
 p#answer_disabled,p#answer_tourplace,p#answer_tourplace,p#answer_tourplace{
   position: relative;
-  bottom:30px;
-  left:160px;
+  bottom: 30px;
+  left: 100px;
   background-color: #ffffff;
-  width: 500px;
+  width: 600px;
   opacity: 0.7;
   text-align: center;
   /* font-weight: 600; */
@@ -272,6 +273,7 @@ p#answer_disabled,p#answer_tourplace,p#answer_tourplace,p#answer_tourplace{
 button#result{
   font-size: 1em;
   font-weight: 800;
+  left: 300px;
 }
 
 button#login2{
@@ -324,11 +326,7 @@ ul{
   list-style: none;
 }
 
-li.rank_1_tour{
-  /* margin:0px;
-  margin-right: 20px;
-  padding: 0px; */
-  /* background-color: #ffffff; */
+/* li.rank_1_tour{
   width:320px;
   position: relative;
   right: 530px;
@@ -341,10 +339,6 @@ li.rank_1_tour{
   font-family: 'paybooc-Bold';
 }
 li.rank_1_res{
-  /* margin:0px;
-  margin-right: 20px;
-  padding: 0px; */
-  /* background-color: #ffffff; */
   width:330px;
   position: relative;
   right:175px;
@@ -357,10 +351,6 @@ li.rank_1_res{
   font-family: 'paybooc-Bold';
 }
 li.rank_1_hotel{
-  /* margin:0px;
-  margin-right: 20px;
-  padding: 0px; */
-  /* background-color: #ffffff; */
   width:330px;
   position: relative;
   left:175px;
@@ -371,7 +361,7 @@ li.rank_1_hotel{
   font-weight: 600;
   line-height: 25px;
   font-family: 'paybooc-Bold';
-}
+} */
 /* 
 img{
   position: relative;
@@ -549,7 +539,7 @@ p.mb-1 {
   font-size: 20px;
   position: relative;
   /* left:45px; */
-  right:255px;
+  right:200px;
   bottom: 35px;
   font-family: 'paybooc-Bold';
   font-size: 1.6em;
@@ -559,7 +549,8 @@ p.mb-2 {
   font-size: 20px;
   position: relative;
   /* left:45px; */
-  right:222px;
+  /* right:222px; */
+  right:200px;
   bottom: 30px;
   font-family: 'paybooc-Bold';
   font-size: 1em;
@@ -590,12 +581,12 @@ h3{
 }
 
 
-a.list-group-item.list-group-item-action > button.btn.btn-dark.float-left.mr-3[type="submit"]{
+/* a.list-group-item.list-group-item-action > button.btn.btn-dark.float-left.mr-3[type="submit"]{
   position: relative;
   bottom: 30px;
-  left: 250px;
+  left: 150px;
   background-color: rgb(28, 37, 75);
-}
+} */
 a.list-group-item.list-group-item-action > button.btn.btn-.float-left.mr-3[type="submit"]{
   position: relative;
   bottom: 30px;
@@ -604,10 +595,10 @@ a.list-group-item.list-group-item-action > button.btn.btn-.float-left.mr-3[type=
   font-weight: bold;
   background-color: rgb(216, 117, 117);
 }
-a.list-group-item.list-group-item-action > button.btn.btn-warning.float-left.mr-3[type="submit"]{
+form > button.btn.btn-warning.float-left.mr-3[type="submit"]{
   position: relative;
   bottom: 30px;
-  left: 250px;
+  right:300px;
   font-weight: 600;
 }
 
@@ -661,11 +652,11 @@ label{
   background-color: #ffffff;
   border-style: solid;
   border-radius: 10px;
-  width: 1100px;
-  height: 470px;
+  width: 1300px;
+  height: 620px;
   position: relative;
-  right: 135px;
-  top:30px;
+  right: 235px;
+  top:50px;
 
 }
 
@@ -683,3 +674,231 @@ label[for='check-btn']{
   border: steelblue;
   width: 300px;
 }
+
+/* 희수 추가 */
+
+.page    { display: none; padding: 0 0.5em; }
+.page h1 { font-size: 2em; line-height: 1em; margin-top: 1.1em; font-weight: bold; }
+.page p  { font-size: 1.5em; line-height: 1.275em; margin-top: 0.15em; }
+
+#loading {
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 192, 192, 0.5);
+  background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* .wrapper_join {
+  position: relative;
+  top:100px;
+}
+
+button.btn.btn-light.btn-block{
+  position: relative;
+  right:200px;
+} */
+
+form#form_join{
+  position: relative;
+  top:100px;
+  right:35px;
+}
+
+input#name.form-control{
+  position: relative;
+  bottom:40px;
+  left:280px;
+  width:300px;
+  font-weight: bold;
+  /* margin-bottom: 15px; */
+}
+input#email.form-control{
+  width: 300px;
+  height: 60px;
+  position: relative;
+  left:280px;
+  bottom: 40px;
+
+}
+
+button.btn.btn-light.btn-block{
+  width:250px;
+  position: relative;
+  right: 300px;
+}
+img.tour{
+  position: relative;
+  bottom: 1px;
+  left:60px;
+}
+
+img.rest{
+  position: relative;
+  bottom: 185px;
+  right:460px;
+}
+
+img.hotel{
+  position: relative;
+  bottom: 570px;
+  left:638px;
+}
+li.rank_1_tour{
+  font-family:'GyeonggiBatang';
+  font-size: 1.8em;
+  position: relative;
+  left:180px;
+  top: 23px;
+  font-weight: bold;
+}
+
+li.rank_1_res{
+  font-family:'GyeonggiBatang';
+  font-size: 1.8em;
+  position: relative;
+  left:230px;
+  bottom: 160px;
+  font-weight: bold;
+}
+
+li.rank_1_hotel{
+  font-family:'GyeonggiBatang';
+  font-size: 1.8em;
+  position: relative;
+  left:758px;
+  bottom: 548px;
+  font-weight: bold;
+}
+
+
+button.btn.btn-warning.float-left.mr-3{
+  position: relative;
+  left:400px;
+}
+
+button.btn.btn-dark.float-left.mr-3{
+  position: relative;
+  bottom: 30px;
+  left:120px;
+}
+
+img.res{
+  position: relative;
+  bottom: 30px;
+}
+
+h3.mb-2{
+  font-size: 1.3em;
+}
+
+h6.con{
+  position: relative;
+  left:230px;
+}
+
+/* 
+h6.detail{
+  position: relative;
+  left:30px;
+} */
+
+li.tname{
+  position: relative;
+  top:300px;
+  left:70px;
+  font-family: 'paybooc-Bold';
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+li.taddress{
+  position: relative;
+  top:310px;
+  left:70px;
+  font-family: 'paybooc-Bold';
+  font-size: 0.95em;
+}
+
+li.ttype{
+  position: relative;
+  top:330px;
+  right:300px;
+  font-family: 'paybooc-Bold';
+  font-size: 1em;
+  /* width:200px */
+}
+
+li.rname{
+  position: relative;
+  top:118px;
+  left:80px;
+  font-family: 'paybooc-Bold';
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+li.raddress{
+  position: relative;
+  top:128px;
+  left:80px;
+  font-family: 'paybooc-Bold';
+  font-size: 0.95em;
+}
+
+li.rtype{
+  position: relative;
+  top:160px;
+  left:80px;
+  font-family: 'paybooc-Bold';
+  font-size: 1em;
+}
+li.rtype2{
+  position: relative;
+  top:160px;
+  left:450px;
+  font-family: 'paybooc-Bold';
+  font-size: 1em;
+}
+li.hname{
+  position: relative;
+  bottom:265px;
+  left:650px;
+  font-family: 'paybooc-Bold';
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+li.haddress{
+  position: relative;
+  bottom:255px;
+  left:650px;
+  font-family: 'paybooc-Bold';
+  font-size: 0.95em;
+}
+li.htype{
+  position: relative;
+  bottom:470px;
+  left:650px;
+  font-family: 'paybooc-Bold';
+  font-size: 1em;
+}
+
+h6.detail{
+  font-family: 'paybooc-Bold';
+  position: relative;
+  right:30px;
+}
+
+ul.tour{
+  width:700px;
+  /* display: inline; */
+}
+
+/* 
+ul.res{
+  width:700px;
+} */

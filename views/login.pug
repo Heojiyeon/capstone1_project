@@ -1,13 +1,10 @@
-doctype html 
-html 
-    include includes/head.pug
-    body
-        h4 로그인 
-        .wrapper_login 
-            form#form_login(action="/loggedIn", method="post")
-                input(type="text", name="id", placeholder="아이디를 입력하세요", requied=true)
-                br
-                input(type="password", name="pw", placeholder="비밀번호를 입력하세요", requied=true)
-                br
-                button#login2 로그인
-            
+extends includes/layout.pug
+block content
+    h4 로그인 
+    .wrapper_login 
+        form#form_login(action="/logged_in", method="post")
+            input(type="text", name="id", placeholder="아이디를 입력하세요", required=true)
+            br
+            input(type="password", name="pw", placeholder="비밀번호를 입력하세요", required=true)
+            br
+            button#login2 로그인

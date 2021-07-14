@@ -1,26 +1,40 @@
-doctype html 
-html 
-    include includes/head.pug
-    body
+extends includes/layout.pug
+block content
         h5 최종 추천 코스
         .wrapper_total_last
-            input#check-btn(type='checkbox')
-            label(for='check-btn') 편의시설 정보 더보기 
-            ul.menubars
-                li 장애인 화장실 있음
-                li 입구에 방지턱이 있어 휠체어 접근이 어려움
-            form#form_result_res(action="/resultRes", method="get")
-                ul
-                    li.rank_1_tour 관광지: 경복궁
-                    li.rank_1_tour ※ 상세 정보: 세종 문화회관은 시민의 문화향수 기회를 확대하고 문화창달에 기여할 수 있기 위해 1999년 7월 1일 재단법인으로 출범하였다.
-                
-                ul 
-                    li.rank_1_res 음식점: 가시리
-                    li.rank_1_res ※ 주소: 서울특별시 종로구 종로31가길 25-5
-                ul 
-                    li.rank_1_hotel 호텔: 신라스테이
-                    li.rank_1_hotel ※ 주소: 서울특별시 종로구 문화대로 33
-            img(src="./images/p1.jpg" width="310")
-            img(src="./images/p2.jpg" width="320")
-            img(src="./images/p3.jpg" width="295")
-
+            ul.tour
+                li.rank_1_tour 1.관광지
+                li.tname= uc[0].NAME
+                li.taddress= uc[0].ADDRESS1
+                img.tour(src= uc[0].IMAGE1 style='width : 350px; height : 250px; float:left; margin-right:20px;')
+                li.ttype= '| 상세정보: '
+                li.ttype= uc[0].DETAIL
+                br
+                li.ttype= '| 편의시설 정보: '
+                li.ttype= uc[0].EXIT
+            ul.res 
+                li.rank_1_res 2.음식점
+                li.rname= uc[1].NAME
+                li.raddress= uc[1].ADDRESS1
+                img.rest(src= uc[1].IMG1 style='width : 350px; height : 250px; float:right; margin-right:20px;')
+                li.rtype= '| 상세정보: '
+                li.rtype= uc[1].TYPE
+                br
+                li.rtype= '| 편의시설 정보: '
+                li.rtype= uc[1].EXIT
+                //- button#con 편의시설 확인하기
+        -if (uc[2] != null) 
+            ul.hotel
+                li.rank_1_hotel 3.숙박시설
+                li.hname= uc[2].NAME
+                li.haddress= uc[2].ADDRESS1
+                img.hotel(src='./images/p3.jpg' style='width : 350px; height : 250px;')
+                li.htype= '| 상세정보: '
+                li.htype= uc[2].TYPE
+                br
+                li.htype= '| 편의시설 정보: '
+                li.htype= uc[2].EXIT
+            
+        //-     img(src="./images/p1.jpg" width="310")
+        //-     img(src="./images/p2.jpg" width="320")
+        //-     img(src="./images/p3.jpg" width="295")

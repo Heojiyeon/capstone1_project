@@ -1,13 +1,10 @@
-doctype html 
-html 
-    include includes/head.pug
-    body 
-        .main
-            h1 무(無)-야호
-                h2 무장애 관광코스 추천 시스템
-            .enjoy
-                a(href="/login")
-                    button#login 로그인
-                a(href="/join")
-                    button#join 회원가입
-            
+extends includes/layout.pug
+block content
+    .main
+        h1.title 무(無)-야호
+            h2 무장애 관광코스 추천 시스템
+        .enjoy
+            a(href="/login")
+                button#login 로그인
+            a(href="/join")
+                button#join 회원가입
