@@ -7,27 +7,45 @@ block content
                 div
                     h3.mb-1= JSON.stringify(val.rank) + "위"              
                     h3.mb-1= JSON.stringify(val.name)
-                    h5.mb-1= val.ADDRESS1
+                    h3.mb-2= val.ADDRESS1
                 br
                 br
                 div
-                    img(src= val.IMG1 style='width : 300px; height : 300px; float:left; margin-right:20px;')
-                    //- img(src= val.IMAGE2 style='width : 200px; height : 200px;')
+                    -if (val.IMG1!= null) 
+                        img(src= val.IMG1 style='width:200px; height:200px; float:left; margin-right:20px;')
+                    -else
+                        img(src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-travel-icon-png-image_1133973.jpg" style='width:200px; height:200px; float:left; margin-right:20px;')
+                    //- img(src= val.IMG1 style='width : 200px; height : 200px; float:left; margin-right:20px;')
                 br
                 br
                 form(action="/user_choice_res", method="post")
-                    //- input(type="checkbox", name="user_choice", value=JSON.stringify(val.id))
-                    button.btn.btn-warning.float-right.mr-3(type="submit" name="user_choice_res" value=val.id) 이 음식점으로 선택!
-                button.btn.btn-dark.float-right.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${val.rank}`) 자세히 보기
+                    button.btn.btn-warning.float-left.mr-3(type="submit" name="user_choice_res" value=val.id) 이 음식점으로 선택!
+                button.btn.btn-dark.float-left.mr-3(type="submit" data-toggle="collapse" data-parent="#accordion" href= `#${val.rank}`) 자세히 보기
                 br
-                p.mb-1= "총 점수 :  10점 만점에 " + val.rscore
+                p.mb-1= "총 점수 : " + val.rscore
+                p.mb-2 (＊10점 만점)
                 br
-                
                 br
                 br
                 .panel-collapse.collapse.in(id=`${val.rank}`)
                     .panel-body
-                        h6= "| 상세 정보 : " + val.TYPE
                         br
                         br
-                        h6= "| 편의시설 정보 : " + val.EXIT
+                        br
+                        br
+                        br
+                        br
+                        br
+                        h6.detail= val.TYPE
+                        br
+                        h6.detail= "| 편의시설 정보 : " 
+                        -if (val.EXIT != null)
+                            h6.detail= "출입문 : " + val.EXIT
+                        -if (val.RESTROOM != null) 
+                            h6.detail= "화장실 : " + val.RESTROOM
+                        -if (val.ELEVATOR != null) 
+                            h6.detail= "승강기 : " + val.ELEVATOR
+                        -if (val.WHEELCHAIR != null) 
+                            h6.detail= "휠체어 : " + val.WHEELCHAIR
+                        -if (val.HANDICAPETC != null) 
+                            h6.detail= "기타 : " + val.HANDICAPETC

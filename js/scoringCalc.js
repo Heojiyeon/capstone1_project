@@ -6,15 +6,15 @@ async function theme_scoring(connection, tid, user_want_theme) {
   var total_theme_score;
   if (theme.rows[0].TYPE == null) {
     total_theme_score = 0;
-    console.log("해당 관광지의 테마는: 없어요!");
-    console.log("테마 점수는: ", total_theme_score);
+    // console.log("해당 관광지의 테마는: 없어요!");
+    // console.log("테마 점수는: ", total_theme_score);
   } else {
-    ref = ['industry', 'history', 'nature', 'culture','shopping']
+    ref = ['industry', 'history', 'nature', 'culture', 'shopping']
     diff = ref.indexOf(user_want_theme)-ref.indexOf(theme.rows[0].TYPE)
     // 10점 만점에서 두 테마의 차를 절대값, 2배를 뺀다.
     var total_theme_score = 10 - (Math.abs(diff))*2;
-    console.log("해당 관광지의 테마는: ", theme.rows[0].TYPE);
-    console.log("테마 점수는: ", total_theme_score);
+    // console.log("해당 관광지의 테마는: ", theme.rows[0].TYPE);
+    // console.log("테마 점수는: ", total_theme_score);
   }
   return total_theme_score
 }
@@ -25,11 +25,11 @@ async function rate_scoring(connection, id, place_type) {
     var rate = await connection.execute( rate_query );
     var total_rate_score;
     if (rate.rows[0] == null) {
-      console.log("해당 평점 점수: 없어요!");
+      // console.log("해당 평점 점수: 없어요!");
       total_rate_score = 0;
     } else {
       total_rate_score = rate.rows[0].RATING_SCORE * rate.rows[0].W_RATING;
-      console.log("평점 점수는: ", total_rate_score);
+      // console.log("평점 점수는: ", total_rate_score);
     }
       return total_rate_score
 }
@@ -40,7 +40,7 @@ async function conv_scoring(connection, id, user_disabled_type, place_type) {
   var conv = await connection.execute( conv_query );
   var total_conv_score;
   if ( conv.rows[0] == null ) {
-    console.log("해당 편의시설 점수: 없어요!");
+    // console.log("해당 편의시설 점수: 없어요!");
     total_conv_score = 0;
   } else {
     if (user_disabled_type == 'physical') {
@@ -51,7 +51,7 @@ async function conv_scoring(connection, id, user_disabled_type, place_type) {
       total_conv_score = parseInt(conv.rows[0].HEARING);
     }
   }
-  console.log("편의시설 점수는: ", total_conv_score);
+  // console.log("편의시설 점수는: ", total_conv_score);
   return total_conv_score
 }
 
@@ -100,7 +100,7 @@ async function dist_scoring(connection, tid, pid, place_type) {
       dist_score = 5
   }
 
-  console.log("거리 점수는 : ", dist_score)
+  // console.log("거리 점수는 : ", dist_score)
 
   // 실제 거리 값과 거리점수 값 둘 다 저장합니다.
   return [d, dist_score]

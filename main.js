@@ -1,12 +1,9 @@
 const express= require("express");
 const path = require('path');
 const morgan = require('morgan');
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 
 const app = express();
-
-const db = require('./js/db');
-db.pool_init();
 
 // 라우터 불러오기
 const pageRouter = require('./routes/page');
@@ -28,6 +25,6 @@ app.use('/', authRouter);
 // Port는 3001
 app.set('port', 3001);
 
-app.listen(3001, () => {
+app.listen(3001, async () => {
     console.log('3001번 포트에서 대기중');
 })

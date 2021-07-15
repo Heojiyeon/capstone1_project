@@ -2,10 +2,10 @@
 async function load_tour_weight(user_disabled_type) {
     var total_weight;
     if (user_disabled_type = "physical") {
-      total_weight = { "theme" : 0.4, "rating" : 0.1, "conv" : 0.5 }; 
+      total_weight = { "theme" : 0.5, "rating" : 0.05, "conv" : 0.45 }; 
     }
     else if (user_disabled_type = "visual") {
-      total_weight = { "theme" : 0.4, "rating" : 0.2, "conv" : 0.4 }; 
+      total_weight = { "theme" : 0.5, "rating" : 0.1, "conv" : 0.4 }; 
     }
     else if (user_disabled_type = "hearing") {
       total_weight = { "theme" : 0.5, "rating" : 0.15, "conv" : 0.35 }; 

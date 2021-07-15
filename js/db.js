@@ -13,12 +13,24 @@ async function pool_init() {
       poolIncrement : 0,
       poolMax       : 4,
       poolMin       : 4,
-      poolAlias: 'mypool'
+      poolAlias: 'mypool',
+      enableStatistics : true,
     });
-
+    console.log("DB Pool Initialized!");
   } catch (err) {
     console.error("init() error: " + err.message);
   }
 }
 
-module.exports = { pool_init }
+async function closePoolAndExit() {
+  console.log("DB Terminating");
+  try {
+    await oracledb.getPool('mypool').close(30);
+    process.exit(0);
+  } catch(err) {
+    console.error(err.message);
+    process.exit(1);
+  }
+}
+
+module.exports = { pool_init, closePoolAndExit }
