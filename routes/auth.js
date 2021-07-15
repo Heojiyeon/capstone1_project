@@ -2,16 +2,26 @@ const express = require('express');
 const router = express.Router();
 
 const run_auth = require('../js/run_auth');
+const db = require('../js/db');
+
+// DB 관련 설정
+const oracledb = require("oracledb");
+oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
+oracledb.autoCommit = true;
 
 // 로그인 및 회원가입 관련 부분 라우팅
 
 // 로그인 화면
-router.get('/login', (req, res) => {
+router.get('/login', async (req, res) => {
+    // DB Initialize
+    await db.pool_init();
     res.render('login');
 });
 
 // 회원가입 화면
-router.get('/join', (req, res) => {
+router.get('/join', async (req, res) => {
+    // DB Initialize
+    await db.pool_init();
     res.render('join');
 });
 
