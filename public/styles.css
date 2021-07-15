@@ -738,13 +738,13 @@ img.tour{
 
 img.rest{
   position: relative;
-  bottom: 185px;
-  right:460px;
+  bottom: 569px;
+  right:200px;
 }
 
 img.hotel{
   position: relative;
-  bottom: 570px;
+  bottom: 720px;
   left:638px;
 }
 li.rank_1_tour{
@@ -760,8 +760,8 @@ li.rank_1_res{
   font-family:'GyeonggiBatang';
   font-size: 1.8em;
   position: relative;
-  left:230px;
-  bottom: 160px;
+  left:380px;
+  bottom: 545px;
   font-weight: bold;
 }
 
@@ -770,7 +770,7 @@ li.rank_1_hotel{
   font-size: 1.8em;
   position: relative;
   left:758px;
-  bottom: 548px;
+  bottom: 688px;
   font-weight: bold;
 }
 
@@ -834,8 +834,8 @@ li.ttype{
 
 li.rname{
   position: relative;
-  top:118px;
-  left:80px;
+  bottom:268px;
+  left:265px;
   font-family: 'paybooc-Bold';
   font-size: 1.3em;
   font-weight: bold;
@@ -843,16 +843,16 @@ li.rname{
 
 li.raddress{
   position: relative;
-  top:128px;
-  left:80px;
+  bottom:258px;
+  left:265px;
   font-family: 'paybooc-Bold';
   font-size: 0.95em;
 }
 
 li.rtype{
   position: relative;
-  top:160px;
-  left:80px;
+  bottom:238px;
+  left:265px;
   font-family: 'paybooc-Bold';
   font-size: 1em;
 }
@@ -865,7 +865,7 @@ li.rtype2{
 }
 li.hname{
   position: relative;
-  bottom:265px;
+  bottom:415px;
   left:650px;
   font-family: 'paybooc-Bold';
   font-size: 1.4em;
@@ -874,14 +874,14 @@ li.hname{
 
 li.haddress{
   position: relative;
-  bottom:255px;
+  bottom:405px;
   left:650px;
   font-family: 'paybooc-Bold';
   font-size: 0.95em;
 }
 li.htype{
   position: relative;
-  bottom:470px;
+  bottom:650px;
   left:650px;
   font-family: 'paybooc-Bold';
   font-size: 1em;
