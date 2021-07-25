@@ -1,7 +1,52 @@
-doctype html 
-html 
-    include includes/head.pug
-    body
-        p 여기는 마지막 화면에서 1위한 것들을 코스로 보여주는 부분이다! 
+extends includes/layout.pug
+block content
+        h5 최종 추천 코스
         .wrapper_total_last
-            
+            ul.tour
+                li.rank_1_tour 1.관광지
+                li.tname= uc[0].NAME
+                li.taddress= uc[0].ADDRESS1
+            -if (uc[0].IMAGE1 != null) 
+                img.tour(src= uc[0].IMAGE1 style='width : 350px; height : 250px; float:left; margin-right:20px;')
+                li.ttype= '| 상세정보: '
+                li.ttype= uc[0].DETAIL
+                br
+                li.ttype= '| 편의시설 정보: '
+                li.ttype= uc[0].EXIT                
+            -else
+                img.tour(src='./images/t.png' style='width : 350px; height : 250px; float:left; margin-right:20px;')
+                li.ttype= '| 상세정보: '
+                li.ttype= uc[0].DETAIL
+                br
+                li.ttype= '| 편의시설 정보: '
+                li.ttype= uc[0].EXIT
+
+        -if (uc[1] != null)
+            ul.res 
+                li.rank_1_res 2.음식점
+                li.rname= uc[1].NAME
+                li.raddress= uc[1].ADDRESS1
+            -if (uc[0].IMG1 != null) 
+                img.rest(src= uc[1].IMG1 style='width : 350px; height : 250px; float:right; margin-right:20px;')
+                li.rtype= '| 상세정보: '
+                li.rtype= uc[1].TYPE
+                br
+                li.rtype= '| 편의시설 정보: '
+                li.rtype= uc[1].EXIT
+            -else
+                img.rest(src='./images/r.jpg' style='width : 350px; height : 250px; float:left; margin-right:20px;')
+                li.rtype= '| 상세정보: '
+                li.rtype= uc[1].TYPE
+                br
+                li.rtype= '| 편의시설 정보: '
+                li.rtype= uc[1].EXIT
+
+        -if (uc[2] != null)
+            ul.hotel
+                li.rank_1_hotel 3.숙박시설
+                li.hname= uc[2].NAME
+                li.haddress= uc[2].ADDRESS1
+                img.hotel(src='./images/p3.jpg' style='width : 350px; height : 250px;')
+                br
+                li.htype= '| 편의시설 정보: '
+                li.htype= uc[2].EXIT

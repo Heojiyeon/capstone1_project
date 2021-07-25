@@ -1,7 +1,20 @@
-// 유저 인풋 불러오는 함수
+// 유저 인풋 DB에 저장하는 함수
+async function save_user_input(connection, disabled, tourplace, wantArea, needHotel) {
+  var inputId = new Date().getTime();
+  try {
+    var input_save_query = `INSERT INTO user_input
+    VALUES('${inputId}', '${disabled}', '${tourplace}', '${wantArea}', '${needHotel}')`;
+    await connection.execute(input_save_query);
+    console.log("성공적으로 저장되었습니다!")
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+// 유저 인풋 DB에서 불러오는 함수
 async function load_user_input(connection) {
   var input_query =
-    "SELECT * FROM (SELECT * FROM user_input ORDER BY ROWNUM DESC) WHERE ROWNUM = 1";
+    'SELECT * FROM (SELECT * FROM user_input ORDER BY ROWNUM DESC) WHERE ROWNUM = 1';
   var input = await connection.execute(input_query);
 
   var user_id = input.rows[0].USER_INPUT_ID;
@@ -66,4 +79,4 @@ async function filter_address2(connection, address2, place_type) {
   return newArray;
 }
 
-module.exports = { load_user_input, filter_wantArea, filter_address2 };
+module.exports = { save_user_input, load_user_input, filter_wantArea, filter_address2 }

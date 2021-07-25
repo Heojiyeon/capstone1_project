@@ -1,37 +1,38 @@
-doctype html 
-html 
-    include includes/head.pug
-    body 
-    .wrapper_question 
+extends includes/layout.pug
+block content
+    h4 정보 입력
+    .wrapper_question
         form(action="/reply", method="post") 
-            p#answer_disabled 어떤 불편을 겪고 계신가요?
-                br  
-                input(type="checkbox", name="disabled", value="visual")
+            p#answer_disabled 1. 어떤 불편을 겪고 계신가요?
+                br
+                input(type="radio", name="disabled", value="visual")
                 label(for="visual") 시각 
-                input(type="checkbox", name="disabled", value="hearing")
-                label(for="visual") 청각 
-                input(type="checkbox", name="disabled", value="physical")
-                label(for="visual") 거동      
-            p#answer_tourplace 원하는 관광 테마를 선택해주세요
+                input(type="radio", name="disabled", value="hearing")
+                label(for="hearing") 청각 
+                input(type="radio", name="disabled", value="physical")
+                label(for="physical") 거동      
+            p#answer_tourplace 2. 원하는 관광 테마를 선택해주세요
                 br
-                input(type="checkbox", name="tourplace", value="nature")
-                label(for="visual") 자연/휴양 
-                input(type="checkbox", name="tourplace", value="history")
-                label(for="visual") 역사 
-                input(type="checkbox", name="tourplace", value="industry")
-                label(for="visual") 산업/건축 
-                input(type="checkbox", name="tourplace", value="shopping")
-                label(for="visual") 쇼핑 
-            p#answer_tourplace 원하는 여행 지역을 선택해주세요
+                input(type="radio", name="tourplace", value="industry")
+                label(for="industry") 산업/건축
+                input(type="radio", name="tourplace", value="history")
+                label(for="history") 역사
+                input(type="radio", name="tourplace", value="nature")
+                label(for="nature") 자연/휴양
+                input(type="radio", name="tourplace", value="culture")
+                label(for="culture") 문화
+                input(type="radio", name="tourplace", value="shopping")
+                label(for="shopping") 쇼핑
+            p#answer_tourplace 3. 원하는 여행 지역을 선택해주세요
                 br
-                input(type="checkbox", name="wantArea", value="1")
-                label(for="visual") 서울
-                input(type="checkbox", name="wantArea", value="31")
-                label(for="visual") 경기
-            p#answer_tourplace 원하는 숙박 여부를 선택해주세요
+                input(type="radio", name="wantArea", value="1")
+                label(for="1") 서울
+                input(type="radio", name="wantArea", value="31")
+                label(for="31") 경기
+            p#answer_tourplace 4. 숙박을 하시나요?
                 br
-                input(type="checkbox", name="needHotel", value="1")
-                label(for="visual") 네
-                input(type="checkbox", name="needHotel", value="0")
-                label(for="visual") 아니오
-            button 결과 확인하기
+                input(type="radio", name="needHotel", value="1")
+                label(for="1") 네
+                input(type="radio", name="needHotel", value="0")
+                label(for="0") 아니오
+            button#result(onClick="alert('당신을 위해 무야호 DB에서 약 800여개의 관광지의 추천점수를 계산합니다. *** 최대 30초 정도가 소요되니 로딩을 기다려주세요! ***')") 결과 확인하기

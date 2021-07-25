@@ -13,9 +13,9 @@ async function restaurant_recommend(connection, f, user_choice, disabled_type) {
         w = await weight.load_res_weight(disabled_type);
         recommend_score = w.dist*d[1] + w.rating*r + w.conv*c;
   
-        console.log("최종 추천도 점수는: ", recommend_score);
-        console.log("음식점 아이디는: ", f[i]);
-        console.log("_________________");
+        // console.log("최종 추천도 점수는: ", recommend_score);
+        // console.log("음식점 아이디는: ", f[i]);
+        // console.log("_________________");
   
         var new_score = {};
         new_score.id = f[i];

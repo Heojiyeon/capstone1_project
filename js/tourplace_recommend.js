@@ -13,9 +13,9 @@ async function tourplace_recommend(connection, f, want_theme, disabled_type) {
         w = await weight.load_tour_weight(disabled_type);
         recommend_score = w.theme*t + w.rating*r + w.conv*c;
   
-        console.log("최종 추천도 점수는: ", recommend_score);
-        console.log("관광지 아이디는: ", f[i]);
-        console.log("_________________");
+        // console.log("최종 추천도 점수는: ", recommend_score);
+        // console.log("관광지 아이디는: ", f[i]);
+        // console.log("_________________");
   
         var new_score = {};
         new_score.id = f[i];
@@ -27,7 +27,7 @@ async function tourplace_recommend(connection, f, want_theme, disabled_type) {
         scores.push(new_score);
     }
 
-    // 상위 10개 정렬 - rank_score에 관광지ID와 각 항목 점수가 담겨있다.
+    // 상위 10개 정렬 - rank_score 에 관광지ID와 각 항목 점수가 담겨있다.
     scores.sort((a, b) => b.recommend_score - a.recommend_score);
     const rank_score = scores.slice(0, 10);
     console.log("당신을 위해 계산한 관광지 갯수 : ", f.length);
